@@ -1,0 +1,260 @@
+{
+  "nodes": [
+    {
+      "id": "42soir5CKpkhYQXYcPmZVG",
+      "nodetype": "APISettingsNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "settings",
+          "datatype": "json"
+        }
+      ],
+      "pos": {
+        "x": 595.75,
+        "y": 588
+      },
+      "size": {
+        "width": 180,
+        "height": 345
+      },
+      "label": "API Settings",
+      "data": {
+        "temperature": 0.7,
+        "top_k": 0,
+        "top_p": 1,
+        "typical": 1,
+        "top_a": 0,
+        "tfs": 1,
+        "rep_pen": 1.05,
+        "rep_pen_range": 4096,
+        "rep_pen_slope": 1
+      }
+    },
+    {
+      "id": "ek3dGyN6CWZeFbeuoKEoMJ",
+      "nodetype": "TextGeneratorNode",
+      "input_slots": [
+        {
+          "id": "activate",
+          "datatype": "action_param"
+        },
+        {
+          "id": "api_connection",
+          "datatype": "api_connection"
+        },
+        {
+          "id": "settings",
+          "datatype": "json"
+        },
+        {
+          "id": "prompt",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "done",
+          "datatype": "action_param"
+        },
+        {
+          "id": "output",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": 980.3196548707956,
+        "y": 512.9324338881621
+      },
+      "size": {
+        "width": 191,
+        "height": 182
+      },
+      "label": "Text Generator",
+      "data": {
+        "max_length": 128,
+        "max_context_length": 2048,
+        "_output": "\n3\n4\n5\n6\n7\n8\n9\n10\n\nDone! All numbers accounted for. 🎉\n"
+      }
+    },
+    {
+      "id": "C2LRjVACognv7o5PCSDL2y",
+      "nodetype": "TextAreaNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": 509.57482783332046,
+        "y": 969.8811380625586
+      },
+      "size": {
+        "width": 300,
+        "height": 229
+      },
+      "label": "TextArea",
+      "data": {
+        "value": "I will now count from 1 to 10!\n\n1\n2"
+      }
+    },
+    {
+      "id": "75ocz9pepdhCFZ7dGySNWt",
+      "nodetype": "ButtonNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "pressed",
+          "datatype": "action"
+        }
+      ],
+      "pos": {
+        "x": 620.6944460610483,
+        "y": 353.882504937446
+      },
+      "size": {
+        "width": 145,
+        "height": 88
+      },
+      "label": "Button Node",
+      "data": {
+        "button_label": "Press!"
+      }
+    },
+    {
+      "id": "8xzP2QaxhsfnhRSpL5HhUi",
+      "nodetype": "ConsoleNode",
+      "input_slots": [
+        {
+          "id": "trigger",
+          "datatype": "action_param"
+        },
+        {
+          "id": "input",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [],
+      "pos": {
+        "x": 1260.8116477986596,
+        "y": 516.0664226359596
+      },
+      "size": {
+        "width": 102,
+        "height": 85
+      },
+      "label": "Console",
+      "data": {}
+    },
+    {
+      "id": "KAbEjiHv3e6hWoonxqXNxC",
+      "nodetype": "TextDisplayNode",
+      "input_slots": [
+        {
+          "id": "update",
+          "datatype": "action_param"
+        },
+        {
+          "id": "text",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [],
+      "pos": {
+        "x": 1261.2269049007193,
+        "y": 635.5794472320058
+      },
+      "size": {
+        "width": 234,
+        "height": 328
+      },
+      "label": "Text Display",
+      "data": {
+        "display_text": "\n3\n4\n5\n6\n7\n8\n9\n10\n\nDone! All numbers accounted for. 🎉\n"
+      }
+    },
+    {
+      "id": "e7qvpeJLXdUK5kp7Se2TMr",
+      "nodetype": "APIConnectionNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "connection",
+          "datatype": "api_connection"
+        }
+      ],
+      "pos": {
+        "x": 482.49657497547764,
+        "y": 468.4011849906409
+      },
+      "size": {
+        "width": 295,
+        "height": 113
+      },
+      "label": "API Connection",
+      "data": {
+        "api_url": "http://127.0.0.1:5001/api/v1/generate"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edgeid": "edge_42soir5CKpkhYQXYcPmZVG-settings_ek3dGyN6CWZeFbeuoKEoMJ-settings",
+      "src_id": "42soir5CKpkhYQXYcPmZVG",
+      "src_slot": "settings",
+      "dst_id": "ek3dGyN6CWZeFbeuoKEoMJ",
+      "dst_slot": "settings"
+    },
+    {
+      "edgeid": "edge_C2LRjVACognv7o5PCSDL2y-value_ek3dGyN6CWZeFbeuoKEoMJ-prompt",
+      "src_id": "C2LRjVACognv7o5PCSDL2y",
+      "src_slot": "value",
+      "dst_id": "ek3dGyN6CWZeFbeuoKEoMJ",
+      "dst_slot": "prompt"
+    },
+    {
+      "edgeid": "edge_75ocz9pepdhCFZ7dGySNWt-pressed_ek3dGyN6CWZeFbeuoKEoMJ-activate",
+      "src_id": "75ocz9pepdhCFZ7dGySNWt",
+      "src_slot": "pressed",
+      "dst_id": "ek3dGyN6CWZeFbeuoKEoMJ",
+      "dst_slot": "activate"
+    },
+    {
+      "edgeid": "edge_ek3dGyN6CWZeFbeuoKEoMJ-done_8xzP2QaxhsfnhRSpL5HhUi-trigger",
+      "src_id": "ek3dGyN6CWZeFbeuoKEoMJ",
+      "src_slot": "done",
+      "dst_id": "8xzP2QaxhsfnhRSpL5HhUi",
+      "dst_slot": "trigger"
+    },
+    {
+      "edgeid": "edge_ek3dGyN6CWZeFbeuoKEoMJ-output_8xzP2QaxhsfnhRSpL5HhUi-text",
+      "src_id": "ek3dGyN6CWZeFbeuoKEoMJ",
+      "src_slot": "output",
+      "dst_id": "8xzP2QaxhsfnhRSpL5HhUi",
+      "dst_slot": "text"
+    },
+    {
+      "edgeid": "edge_ek3dGyN6CWZeFbeuoKEoMJ-done_KAbEjiHv3e6hWoonxqXNxC-update",
+      "src_id": "ek3dGyN6CWZeFbeuoKEoMJ",
+      "src_slot": "done",
+      "dst_id": "KAbEjiHv3e6hWoonxqXNxC",
+      "dst_slot": "update"
+    },
+    {
+      "edgeid": "edge_ek3dGyN6CWZeFbeuoKEoMJ-output_KAbEjiHv3e6hWoonxqXNxC-text",
+      "src_id": "ek3dGyN6CWZeFbeuoKEoMJ",
+      "src_slot": "output",
+      "dst_id": "KAbEjiHv3e6hWoonxqXNxC",
+      "dst_slot": "text"
+    },
+    {
+      "edgeid": "edge_e7qvpeJLXdUK5kp7Se2TMr-connection_ek3dGyN6CWZeFbeuoKEoMJ-api_connection",
+      "src_id": "e7qvpeJLXdUK5kp7Se2TMr",
+      "src_slot": "connection",
+      "dst_id": "ek3dGyN6CWZeFbeuoKEoMJ",
+      "dst_slot": "api_connection"
+    }
+  ]
+}

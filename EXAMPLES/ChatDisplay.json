@@ -1,0 +1,170 @@
+{
+  "nodes": [
+    {
+      "id": "X2V937sDZNbCU5YghHt8Qx",
+      "nodetype": "ChatDisplayNode",
+      "input_slots": [
+        {
+          "id": "update",
+          "datatype": "action"
+        },
+        {
+          "id": "messages",
+          "datatype": "message[]"
+        }
+      ],
+      "output_slots": [],
+      "pos": {
+        "x": 249.02085412977976,
+        "y": 125.10038824080897
+      },
+      "size": {
+        "width": 331,
+        "height": 315
+      },
+      "label": "Chat Display",
+      "data": {
+        "messages": [],
+        "message_count": 0,
+        "auto_scroll": true
+      }
+    },
+    {
+      "id": "46zMAAgrRb5jKqkUn2iX7c",
+      "nodetype": "MessageDatabaseNode",
+      "input_slots": [
+        {
+          "id": "add_message",
+          "datatype": "action_param"
+        },
+        {
+          "id": "clear_database",
+          "datatype": "action"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "on_update",
+          "datatype": "action"
+        },
+        {
+          "id": "messages",
+          "datatype": "message[]"
+        },
+        {
+          "id": "message_count",
+          "datatype": "int"
+        }
+      ],
+      "pos": {
+        "x": -17.522860204156558,
+        "y": 17.525841186183655
+      },
+      "size": {
+        "width": 230,
+        "height": 196
+      },
+      "label": "Message Database",
+      "data": {
+        "messages": [],
+        "message_count": 0
+      }
+    },
+    {
+      "id": "bDRZq8C47qsw7LHbfo2j8q",
+      "nodetype": "ChatMessageNode",
+      "input_slots": [
+        {
+          "id": "activate",
+          "datatype": "action_param"
+        },
+        {
+          "id": "text",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "message_output",
+          "datatype": "action_param"
+        },
+        {
+          "id": "cached_message",
+          "datatype": "message"
+        }
+      ],
+      "pos": {
+        "x": -37.44847532109662,
+        "y": 331.92573857200193
+      },
+      "size": {
+        "width": 252,
+        "height": 125
+      },
+      "label": "Chat Message",
+      "data": {
+        "role": "user",
+        "cached_message": null
+      }
+    },
+    {
+      "id": "VMW8hzb2GjKJS4kXmkejxC",
+      "nodetype": "ChatInputNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "submit",
+          "datatype": "action_param"
+        },
+        {
+          "id": "text",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": -36.39145728053515,
+        "y": 464.05299364217433
+      },
+      "size": {
+        "width": 272,
+        "height": 175
+      },
+      "label": "Chat Input",
+      "data": {
+        "text": "",
+        "_output": "",
+        "placeholder": "Type a message..."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edgeid": "edge_46zMAAgrRb5jKqkUn2iX7c-on_update_X2V937sDZNbCU5YghHt8Qx-update",
+      "src_id": "46zMAAgrRb5jKqkUn2iX7c",
+      "src_slot": "on_update",
+      "dst_id": "X2V937sDZNbCU5YghHt8Qx",
+      "dst_slot": "update"
+    },
+    {
+      "edgeid": "edge_46zMAAgrRb5jKqkUn2iX7c-messages_X2V937sDZNbCU5YghHt8Qx-messages",
+      "src_id": "46zMAAgrRb5jKqkUn2iX7c",
+      "src_slot": "messages",
+      "dst_id": "X2V937sDZNbCU5YghHt8Qx",
+      "dst_slot": "messages"
+    },
+    {
+      "edgeid": "edge_bDRZq8C47qsw7LHbfo2j8q-message_output_46zMAAgrRb5jKqkUn2iX7c-add_message",
+      "src_id": "bDRZq8C47qsw7LHbfo2j8q",
+      "src_slot": "message_output",
+      "dst_id": "46zMAAgrRb5jKqkUn2iX7c",
+      "dst_slot": "add_message"
+    },
+    {
+      "edgeid": "edge_VMW8hzb2GjKJS4kXmkejxC-submit_bDRZq8C47qsw7LHbfo2j8q-activate",
+      "src_id": "VMW8hzb2GjKJS4kXmkejxC",
+      "src_slot": "submit",
+      "dst_id": "bDRZq8C47qsw7LHbfo2j8q",
+      "dst_slot": "activate"
+    }
+  ]
+}

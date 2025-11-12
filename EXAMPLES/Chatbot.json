@@ -1,0 +1,671 @@
+{
+  "nodes": [
+    {
+      "id": "CHsLXR3d32wq4NL9tVN3oJ",
+      "nodetype": "ChatGeneratorNode",
+      "input_slots": [
+        {
+          "id": "activate",
+          "datatype": "action_param"
+        },
+        {
+          "id": "api_connection",
+          "datatype": "api_connection"
+        },
+        {
+          "id": "settings",
+          "datatype": "json"
+        },
+        {
+          "id": "messages",
+          "datatype": "message[]"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "done",
+          "datatype": "action_param"
+        },
+        {
+          "id": "output",
+          "datatype": "message"
+        }
+      ],
+      "pos": {
+        "x": 397.5257243443073,
+        "y": 374.975115403817
+      },
+      "size": {
+        "width": 195,
+        "height": 185
+      },
+      "label": "Chat Generator",
+      "data": {
+        "max_length": 128,
+        "max_context_length": 2048,
+        "_output": {
+          "role": "assistant",
+          "content": "import (\n\t\"fmt\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc main() {\n\tvar input string\n\tfmt.Scanln(&input)\n\n\twords := strings.Split(input, \" \")\n\tvar numbers []int\n\tfor _, word := range words {\n\t\tnum, err := strconv.Atoi(word)\n\t\tif err == nil {\n\t\t\tnumbers = append(numbers, num)\n\t\t}\n\t}\n\n\tsum := 0\n\tfor _, num := range numbers {\n\t\tsum += num\n\t}\n\n\tfmt.Println"
+        }
+      }
+    },
+    {
+      "id": "JL8AnFAZZCNgoqUG5o4Vzq",
+      "nodetype": "APISettingsNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "settings",
+          "datatype": "json"
+        }
+      ],
+      "pos": {
+        "x": -12.497713116143515,
+        "y": 146.06190951471928
+      },
+      "size": {
+        "width": 183,
+        "height": 349
+      },
+      "label": "API Settings",
+      "data": {
+        "temperature": 0.7,
+        "top_k": 0,
+        "top_p": 1,
+        "typical": 1,
+        "top_a": 0,
+        "tfs": 1,
+        "rep_pen": 1.05,
+        "rep_pen_range": 4096,
+        "rep_pen_slope": 1
+      }
+    },
+    {
+      "id": "QJonRJKxj74LKX7ZCUMMF3",
+      "nodetype": "MessageDatabaseNode",
+      "input_slots": [
+        {
+          "id": "add_message",
+          "datatype": "action_param"
+        },
+        {
+          "id": "clear_database",
+          "datatype": "action"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "on_update",
+          "datatype": "action"
+        },
+        {
+          "id": "messages",
+          "datatype": "message[]"
+        },
+        {
+          "id": "message_count",
+          "datatype": "int"
+        }
+      ],
+      "pos": {
+        "x": 965.4620898074976,
+        "y": 305.42140883345473
+      },
+      "size": {
+        "width": 233,
+        "height": 216
+      },
+      "label": "Message Database",
+      "data": {
+        "messages": [],
+        "message_count": 0
+      }
+    },
+    {
+      "id": "kDjL88MVcwnbLJti4yzR3C",
+      "nodetype": "TextAreaNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": 379.86342769322096,
+        "y": 101.77416243977947
+      },
+      "size": {
+        "width": 165,
+        "height": 144
+      },
+      "label": "TextArea",
+      "data": {
+        "value": "You are a helpful assistant that will assist the user with whatever questions they ask."
+      }
+    },
+    {
+      "id": "faHHeCiiwzDfLeKQYooPqs",
+      "nodetype": "CommentNode",
+      "input_slots": [],
+      "output_slots": [],
+      "pos": {
+        "x": 386.20611892867674,
+        "y": -25.6713366907014
+      },
+      "size": {
+        "width": 158,
+        "height": 116
+      },
+      "label": "Comment",
+      "data": {
+        "value": "System Prompt\n\nAdded once at the start"
+      }
+    },
+    {
+      "id": "gWFMtJKvUTE9ZvLZYc2uV3",
+      "nodetype": "ActionMergerNode",
+      "input_slots": [
+        {
+          "id": "in1",
+          "datatype": "action_param"
+        },
+        {
+          "id": "in2",
+          "datatype": "action_param"
+        },
+        {
+          "id": "in3",
+          "datatype": "action_param"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "out",
+          "datatype": "action_param"
+        }
+      ],
+      "pos": {
+        "x": 758.5989138505695,
+        "y": 430.53033111105793
+      },
+      "size": {
+        "width": 106,
+        "height": 109
+      },
+      "label": "Action Merger",
+      "data": {}
+    },
+    {
+      "id": "T4CYC9HK632jjqN6gGn75V",
+      "nodetype": "ChatMessageNode",
+      "input_slots": [
+        {
+          "id": "activate",
+          "datatype": "action_param"
+        },
+        {
+          "id": "text",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "message_output",
+          "datatype": "action_param"
+        },
+        {
+          "id": "cached_message",
+          "datatype": "message"
+        }
+      ],
+      "pos": {
+        "x": 640.8723841512268,
+        "y": 89.86898199469347
+      },
+      "size": {
+        "width": 252,
+        "height": 125
+      },
+      "label": "Chat Message",
+      "data": {
+        "role": "system",
+        "cached_message": {
+          "role": "system",
+          "content": "You are a helpful assistant that will assist the user with whatever questions they ask."
+        }
+      }
+    },
+    {
+      "id": "Kib8DJf3iMkWvBYNWTRbcJ",
+      "nodetype": "ConditionalActivationNode",
+      "input_slots": [
+        {
+          "id": "action",
+          "datatype": "action_param"
+        },
+        {
+          "id": "condition",
+          "datatype": "bool"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "true",
+          "datatype": "action_param"
+        },
+        {
+          "id": "false",
+          "datatype": "action_param"
+        }
+      ],
+      "pos": {
+        "x": 652.3153582205182,
+        "y": -25.53590214446112
+      },
+      "size": {
+        "width": 136,
+        "height": 89
+      },
+      "label": "Conditional Activation",
+      "data": {}
+    },
+    {
+      "id": "NLgMcagpBNcqAB7bpxSm2x",
+      "nodetype": "IntComparisonNode",
+      "input_slots": [
+        {
+          "id": "A",
+          "datatype": "int"
+        },
+        {
+          "id": "B",
+          "datatype": "int"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "result",
+          "datatype": "bool"
+        }
+      ],
+      "pos": {
+        "x": 576.219371062407,
+        "y": -205.71965763470996
+      },
+      "size": {
+        "width": 137,
+        "height": 125
+      },
+      "label": "Int Comparison",
+      "data": {
+        "operation": "equals"
+      }
+    },
+    {
+      "id": "YP7h2h2XgJAwxuyj2NrmqR",
+      "nodetype": "IntNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "int"
+        }
+      ],
+      "pos": {
+        "x": 849.0244777448174,
+        "y": -51.53928242050338
+      },
+      "size": {
+        "width": 138,
+        "height": 88
+      },
+      "label": "Int",
+      "data": {
+        "value": 0
+      }
+    },
+    {
+      "id": "mpTg3tgTMWUSUUf89XLcUS",
+      "nodetype": "CommentNode",
+      "input_slots": [],
+      "output_slots": [],
+      "pos": {
+        "x": 777.1772146641368,
+        "y": -199.50763181934894
+      },
+      "size": {
+        "width": 158,
+        "height": 116
+      },
+      "label": "Comment",
+      "data": {
+        "value": "Only execute if there are no other messages"
+      }
+    },
+    {
+      "id": "jEwVuwrMJL9gccJhmWQpPP",
+      "nodetype": "ChatInputNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "submit",
+          "datatype": "action_param"
+        },
+        {
+          "id": "text",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": 296.7971268297429,
+        "y": 935.4530068604735
+      },
+      "size": {
+        "width": 389,
+        "height": 223
+      },
+      "label": "Chat Input",
+      "data": {
+        "text": "",
+        "_output": "What is the capital of Portugal?",
+        "placeholder": "Type a message..."
+      }
+    },
+    {
+      "id": "MmJr7ATcGy6Jj95smMGRiM",
+      "nodetype": "ChatDisplayNode",
+      "input_slots": [
+        {
+          "id": "update",
+          "datatype": "action"
+        },
+        {
+          "id": "messages",
+          "datatype": "message[]"
+        }
+      ],
+      "output_slots": [],
+      "pos": {
+        "x": 720.5102273305222,
+        "y": 666.8341995834426
+      },
+      "size": {
+        "width": 751,
+        "height": 448
+      },
+      "label": "Chat Display",
+      "data": {
+        "messages": [],
+        "message_count": 0,
+        "auto_scroll": true
+      }
+    },
+    {
+      "id": "LQLwwmzBqfDpQwtLRLigFN",
+      "nodetype": "SequentialActivationNode",
+      "input_slots": [
+        {
+          "id": "action",
+          "datatype": "action_param"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "out1",
+          "datatype": "action_param"
+        },
+        {
+          "id": "out2",
+          "datatype": "action_param"
+        },
+        {
+          "id": "out3",
+          "datatype": "action_param"
+        }
+      ],
+      "pos": {
+        "x": 236.13572057302287,
+        "y": 539.4404844931473
+      },
+      "size": {
+        "width": 133,
+        "height": 109
+      },
+      "label": "Sequential Activation",
+      "data": {}
+    },
+    {
+      "id": "bzk3eAnRmN4oYeiRRxfZsA",
+      "nodetype": "SlotActivatedNode",
+      "input_slots": [
+        {
+          "id": "in",
+          "datatype": "action_param"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "pre",
+          "datatype": "action"
+        },
+        {
+          "id": "out",
+          "datatype": "action_param"
+        },
+        {
+          "id": "post",
+          "datatype": "action"
+        }
+      ],
+      "pos": {
+        "x": 964.1029174354437,
+        "y": 117.28885233317877
+      },
+      "size": {
+        "width": 109,
+        "height": 109
+      },
+      "label": "Slot Activated",
+      "data": {}
+    },
+    {
+      "id": "L3suC2QV2UaQxMa2qHs4Ni",
+      "nodetype": "ChatMessageNode",
+      "input_slots": [
+        {
+          "id": "activate",
+          "datatype": "action_param"
+        },
+        {
+          "id": "text",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "message_output",
+          "datatype": "action_param"
+        },
+        {
+          "id": "cached_message",
+          "datatype": "message"
+        }
+      ],
+      "pos": {
+        "x": -46.24962099871216,
+        "y": 527.0118276174337
+      },
+      "size": {
+        "width": 252,
+        "height": 125
+      },
+      "label": "Chat Message",
+      "data": {
+        "role": "user",
+        "cached_message": {
+          "role": "user",
+          "content": "What is the capital of Portugal?"
+        }
+      }
+    },
+    {
+      "id": "7pRZXsLKT2uuKSB6p8EKWi",
+      "nodetype": "APIConnectionNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "connection",
+          "datatype": "api_connection"
+        }
+      ],
+      "pos": {
+        "x": -135.550761214047,
+        "y": 19.75534742693842
+      },
+      "size": {
+        "width": 302,
+        "height": 114
+      },
+      "label": "API Connection",
+      "data": {
+        "api_url": "http://127.0.0.1:5001/v1/chat/completions"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edgeid": "edge_JL8AnFAZZCNgoqUG5o4Vzq-settings_CHsLXR3d32wq4NL9tVN3oJ-settings",
+      "src_id": "JL8AnFAZZCNgoqUG5o4Vzq",
+      "src_slot": "settings",
+      "dst_id": "CHsLXR3d32wq4NL9tVN3oJ",
+      "dst_slot": "settings"
+    },
+    {
+      "edgeid": "edge_gWFMtJKvUTE9ZvLZYc2uV3-out_QJonRJKxj74LKX7ZCUMMF3-add_message",
+      "src_id": "gWFMtJKvUTE9ZvLZYc2uV3",
+      "src_slot": "out",
+      "dst_id": "QJonRJKxj74LKX7ZCUMMF3",
+      "dst_slot": "add_message"
+    },
+    {
+      "edgeid": "edge_kDjL88MVcwnbLJti4yzR3C-value_T4CYC9HK632jjqN6gGn75V-text",
+      "src_id": "kDjL88MVcwnbLJti4yzR3C",
+      "src_slot": "value",
+      "dst_id": "T4CYC9HK632jjqN6gGn75V",
+      "dst_slot": "text"
+    },
+    {
+      "edgeid": "edge_T4CYC9HK632jjqN6gGn75V-message_output_gWFMtJKvUTE9ZvLZYc2uV3-in1",
+      "src_id": "T4CYC9HK632jjqN6gGn75V",
+      "src_slot": "message_output",
+      "dst_id": "gWFMtJKvUTE9ZvLZYc2uV3",
+      "dst_slot": "in1"
+    },
+    {
+      "edgeid": "edge_Kib8DJf3iMkWvBYNWTRbcJ-true_T4CYC9HK632jjqN6gGn75V-activate",
+      "src_id": "Kib8DJf3iMkWvBYNWTRbcJ",
+      "src_slot": "true",
+      "dst_id": "T4CYC9HK632jjqN6gGn75V",
+      "dst_slot": "activate"
+    },
+    {
+      "edgeid": "edge_QJonRJKxj74LKX7ZCUMMF3-message_count_NLgMcagpBNcqAB7bpxSm2x-A",
+      "src_id": "QJonRJKxj74LKX7ZCUMMF3",
+      "src_slot": "message_count",
+      "dst_id": "NLgMcagpBNcqAB7bpxSm2x",
+      "dst_slot": "A"
+    },
+    {
+      "edgeid": "edge_YP7h2h2XgJAwxuyj2NrmqR-value_NLgMcagpBNcqAB7bpxSm2x-B",
+      "src_id": "YP7h2h2XgJAwxuyj2NrmqR",
+      "src_slot": "value",
+      "dst_id": "NLgMcagpBNcqAB7bpxSm2x",
+      "dst_slot": "B"
+    },
+    {
+      "edgeid": "edge_NLgMcagpBNcqAB7bpxSm2x-result_Kib8DJf3iMkWvBYNWTRbcJ-condition",
+      "src_id": "NLgMcagpBNcqAB7bpxSm2x",
+      "src_slot": "result",
+      "dst_id": "Kib8DJf3iMkWvBYNWTRbcJ",
+      "dst_slot": "condition"
+    },
+    {
+      "edgeid": "edge_QJonRJKxj74LKX7ZCUMMF3-on_update_MmJr7ATcGy6Jj95smMGRiM-update",
+      "src_id": "QJonRJKxj74LKX7ZCUMMF3",
+      "src_slot": "on_update",
+      "dst_id": "MmJr7ATcGy6Jj95smMGRiM",
+      "dst_slot": "update"
+    },
+    {
+      "edgeid": "edge_QJonRJKxj74LKX7ZCUMMF3-messages_MmJr7ATcGy6Jj95smMGRiM-messages",
+      "src_id": "QJonRJKxj74LKX7ZCUMMF3",
+      "src_slot": "messages",
+      "dst_id": "MmJr7ATcGy6Jj95smMGRiM",
+      "dst_slot": "messages"
+    },
+    {
+      "edgeid": "edge_LQLwwmzBqfDpQwtLRLigFN-out1_bzk3eAnRmN4oYeiRRxfZsA-in",
+      "src_id": "LQLwwmzBqfDpQwtLRLigFN",
+      "src_slot": "out1",
+      "dst_id": "bzk3eAnRmN4oYeiRRxfZsA",
+      "dst_slot": "in"
+    },
+    {
+      "edgeid": "edge_QJonRJKxj74LKX7ZCUMMF3-messages_CHsLXR3d32wq4NL9tVN3oJ-messages",
+      "src_id": "QJonRJKxj74LKX7ZCUMMF3",
+      "src_slot": "messages",
+      "dst_id": "CHsLXR3d32wq4NL9tVN3oJ",
+      "dst_slot": "messages"
+    },
+    {
+      "edgeid": "edge_bzk3eAnRmN4oYeiRRxfZsA-pre_Kib8DJf3iMkWvBYNWTRbcJ-action",
+      "src_id": "bzk3eAnRmN4oYeiRRxfZsA",
+      "src_slot": "pre",
+      "dst_id": "Kib8DJf3iMkWvBYNWTRbcJ",
+      "dst_slot": "action"
+    },
+    {
+      "edgeid": "edge_bzk3eAnRmN4oYeiRRxfZsA-out_gWFMtJKvUTE9ZvLZYc2uV3-in2",
+      "src_id": "bzk3eAnRmN4oYeiRRxfZsA",
+      "src_slot": "out",
+      "dst_id": "gWFMtJKvUTE9ZvLZYc2uV3",
+      "dst_slot": "in2"
+    },
+    {
+      "edgeid": "edge_LQLwwmzBqfDpQwtLRLigFN-out2_CHsLXR3d32wq4NL9tVN3oJ-activate",
+      "src_id": "LQLwwmzBqfDpQwtLRLigFN",
+      "src_slot": "out2",
+      "dst_id": "CHsLXR3d32wq4NL9tVN3oJ",
+      "dst_slot": "activate"
+    },
+    {
+      "edgeid": "edge_CHsLXR3d32wq4NL9tVN3oJ-done_gWFMtJKvUTE9ZvLZYc2uV3-in3",
+      "src_id": "CHsLXR3d32wq4NL9tVN3oJ",
+      "src_slot": "done",
+      "dst_id": "gWFMtJKvUTE9ZvLZYc2uV3",
+      "dst_slot": "in3"
+    },
+    {
+      "edgeid": "edge_jEwVuwrMJL9gccJhmWQpPP-submit_L3suC2QV2UaQxMa2qHs4Ni-activate",
+      "src_id": "jEwVuwrMJL9gccJhmWQpPP",
+      "src_slot": "submit",
+      "dst_id": "L3suC2QV2UaQxMa2qHs4Ni",
+      "dst_slot": "activate"
+    },
+    {
+      "edgeid": "edge_L3suC2QV2UaQxMa2qHs4Ni-message_output_LQLwwmzBqfDpQwtLRLigFN-action",
+      "src_id": "L3suC2QV2UaQxMa2qHs4Ni",
+      "src_slot": "message_output",
+      "dst_id": "LQLwwmzBqfDpQwtLRLigFN",
+      "dst_slot": "action"
+    },
+    {
+      "edgeid": "edge_7pRZXsLKT2uuKSB6p8EKWi-connection_CHsLXR3d32wq4NL9tVN3oJ-api_connection",
+      "src_id": "7pRZXsLKT2uuKSB6p8EKWi",
+      "src_slot": "connection",
+      "dst_id": "CHsLXR3d32wq4NL9tVN3oJ",
+      "dst_slot": "api_connection"
+    }
+  ]
+}

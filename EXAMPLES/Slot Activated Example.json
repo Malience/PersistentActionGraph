@@ -1,0 +1,276 @@
+{
+  "nodes": [
+    {
+      "id": "VRwJKLcPdQHeWjDuevd4bn",
+      "nodetype": "StringNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": 184.27620654126827,
+        "y": 38.66738271026158
+      },
+      "size": {
+        "width": 178,
+        "height": 88
+      },
+      "label": "String",
+      "data": {
+        "value": "Slot Activated"
+      }
+    },
+    {
+      "id": "E3F8saaqabNSAAEGDqdeKu",
+      "nodetype": "ConsoleNode",
+      "input_slots": [
+        {
+          "id": "trigger",
+          "datatype": "action_param"
+        },
+        {
+          "id": "input",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [],
+      "pos": {
+        "x": 510.98014438631105,
+        "y": 105.10021686816714
+      },
+      "size": {
+        "width": 106,
+        "height": 89
+      },
+      "label": "Console",
+      "data": {}
+    },
+    {
+      "id": "Wgu7vJ8raPEp7JwwzZo4y2",
+      "nodetype": "SlotActivatedNode",
+      "input_slots": [
+        {
+          "id": "in",
+          "datatype": "action_param"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "pre",
+          "datatype": "action"
+        },
+        {
+          "id": "out",
+          "datatype": "action_param"
+        },
+        {
+          "id": "post",
+          "datatype": "action"
+        }
+      ],
+      "pos": {
+        "x": 219.76015220042333,
+        "y": 190.16225452147876
+      },
+      "size": {
+        "width": 109,
+        "height": 109
+      },
+      "label": "Slot Activated",
+      "data": {}
+    },
+    {
+      "id": "CHvKbaKDzHF9UJ8L9EHsEN",
+      "nodetype": "ChatDisplayNode",
+      "input_slots": [
+        {
+          "id": "update",
+          "datatype": "action"
+        },
+        {
+          "id": "messages",
+          "datatype": "message[]"
+        }
+      ],
+      "output_slots": [],
+      "pos": {
+        "x": 247.3909859901749,
+        "y": 488.8562925403443
+      },
+      "size": {
+        "width": 336,
+        "height": 298
+      },
+      "label": "Chat Display",
+      "data": {
+        "messages": [],
+        "message_count": 0,
+        "auto_scroll": true
+      }
+    },
+    {
+      "id": "kWSB2gJTwAM3enpjQvck9T",
+      "nodetype": "ChatMessageNode",
+      "input_slots": [
+        {
+          "id": "activate",
+          "datatype": "action_param"
+        },
+        {
+          "id": "text",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "message_output",
+          "datatype": "action_param"
+        },
+        {
+          "id": "cached_message",
+          "datatype": "message"
+        }
+      ],
+      "pos": {
+        "x": -75.51995437145274,
+        "y": 187.04464657734573
+      },
+      "size": {
+        "width": 252,
+        "height": 125
+      },
+      "label": "Chat Message",
+      "data": {
+        "role": "user",
+        "cached_message": {
+          "role": "user",
+          "content": "asdasdas"
+        }
+      }
+    },
+    {
+      "id": "B9HVhBvp3ASXWDe8nBE7f9",
+      "nodetype": "ChatInputNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "submit",
+          "datatype": "action_param"
+        },
+        {
+          "id": "text",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": -90.19772438789036,
+        "y": 475.0958831499339
+      },
+      "size": {
+        "width": 272,
+        "height": 175
+      },
+      "label": "Chat Input",
+      "data": {
+        "text": "",
+        "_output": "asdasdas",
+        "placeholder": "Type a message..."
+      }
+    },
+    {
+      "id": "dxED462AbWkzW9wypWknyr",
+      "nodetype": "MessageDatabaseNode",
+      "input_slots": [
+        {
+          "id": "add_message",
+          "datatype": "action_param"
+        },
+        {
+          "id": "clear_database",
+          "datatype": "action"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "on_update",
+          "datatype": "action"
+        },
+        {
+          "id": "messages",
+          "datatype": "message[]"
+        },
+        {
+          "id": "message_count",
+          "datatype": "int"
+        }
+      ],
+      "pos": {
+        "x": 372.1520311298947,
+        "y": 263.18557853761587
+      },
+      "size": {
+        "width": 233,
+        "height": 216
+      },
+      "label": "Message Database",
+      "data": {
+        "messages": [],
+        "message_count": 0
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edgeid": "edge_VRwJKLcPdQHeWjDuevd4bn-value_E3F8saaqabNSAAEGDqdeKu-input",
+      "src_id": "VRwJKLcPdQHeWjDuevd4bn",
+      "src_slot": "value",
+      "dst_id": "E3F8saaqabNSAAEGDqdeKu",
+      "dst_slot": "input"
+    },
+    {
+      "edgeid": "edge_Wgu7vJ8raPEp7JwwzZo4y2-pre_E3F8saaqabNSAAEGDqdeKu-trigger",
+      "src_id": "Wgu7vJ8raPEp7JwwzZo4y2",
+      "src_slot": "pre",
+      "dst_id": "E3F8saaqabNSAAEGDqdeKu",
+      "dst_slot": "trigger"
+    },
+    {
+      "edgeid": "edge_kWSB2gJTwAM3enpjQvck9T-message_output_Wgu7vJ8raPEp7JwwzZo4y2-in",
+      "src_id": "kWSB2gJTwAM3enpjQvck9T",
+      "src_slot": "message_output",
+      "dst_id": "Wgu7vJ8raPEp7JwwzZo4y2",
+      "dst_slot": "in"
+    },
+    {
+      "edgeid": "edge_B9HVhBvp3ASXWDe8nBE7f9-submit_kWSB2gJTwAM3enpjQvck9T-activate",
+      "src_id": "B9HVhBvp3ASXWDe8nBE7f9",
+      "src_slot": "submit",
+      "dst_id": "kWSB2gJTwAM3enpjQvck9T",
+      "dst_slot": "activate"
+    },
+    {
+      "edgeid": "edge_Wgu7vJ8raPEp7JwwzZo4y2-out_dxED462AbWkzW9wypWknyr-add_message",
+      "src_id": "Wgu7vJ8raPEp7JwwzZo4y2",
+      "src_slot": "out",
+      "dst_id": "dxED462AbWkzW9wypWknyr",
+      "dst_slot": "add_message"
+    },
+    {
+      "edgeid": "edge_dxED462AbWkzW9wypWknyr-on_update_CHvKbaKDzHF9UJ8L9EHsEN-update",
+      "src_id": "dxED462AbWkzW9wypWknyr",
+      "src_slot": "on_update",
+      "dst_id": "CHvKbaKDzHF9UJ8L9EHsEN",
+      "dst_slot": "update"
+    },
+    {
+      "edgeid": "edge_dxED462AbWkzW9wypWknyr-messages_CHvKbaKDzHF9UJ8L9EHsEN-messages",
+      "src_id": "dxED462AbWkzW9wypWknyr",
+      "src_slot": "messages",
+      "dst_id": "CHvKbaKDzHF9UJ8L9EHsEN",
+      "dst_slot": "messages"
+    }
+  ]
+}

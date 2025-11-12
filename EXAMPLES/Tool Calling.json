@@ -1,0 +1,594 @@
+{
+  "nodes": [
+    {
+      "id": "NXVqRPBWVwEJmqebKRQNMo",
+      "nodetype": "ToArrayNode",
+      "input_slots": [
+        {
+          "id": "input",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": 97.76426931839458,
+        "y": 102.94631859991816
+      },
+      "size": {
+        "width": 130,
+        "height": 69
+      },
+      "label": "To Array",
+      "data": {}
+    },
+    {
+      "id": "BLjdfVZSnZS86yHdpNCV82",
+      "nodetype": "ToArrayNode",
+      "input_slots": [
+        {
+          "id": "input",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": 89.48256270504913,
+        "y": 197.35777399205634
+      },
+      "size": {
+        "width": 130,
+        "height": 69
+      },
+      "label": "To Array",
+      "data": {}
+    },
+    {
+      "id": "KeVaZfoxuF5NQnv2u7PDWr",
+      "nodetype": "APISettingsNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "settings",
+          "datatype": "json"
+        }
+      ],
+      "pos": {
+        "x": -95.29598658806714,
+        "y": -291.8715276233209
+      },
+      "size": {
+        "width": 183,
+        "height": 349
+      },
+      "label": "API Settings",
+      "data": {
+        "temperature": 0.7,
+        "top_k": 0,
+        "top_p": 1,
+        "typical": 1,
+        "top_a": 0,
+        "tfs": 1,
+        "rep_pen": 1.05,
+        "rep_pen_range": 4096,
+        "rep_pen_slope": 1
+      }
+    },
+    {
+      "id": "MqWLarqTU33TfZgpbSXFt8",
+      "nodetype": "APIConnectionNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "connection",
+          "datatype": "api_connection"
+        }
+      ],
+      "pos": {
+        "x": -128.82206904626702,
+        "y": -420.9688055600702
+      },
+      "size": {
+        "width": 218,
+        "height": 115
+      },
+      "label": "API Connection",
+      "data": {
+        "api_url": "http://127.0.0.1:5001/v1/chat/completions"
+      }
+    },
+    {
+      "id": "X2krt4YoGGqbkXRWpBGChF",
+      "nodetype": "ToolCallingNode",
+      "input_slots": [
+        {
+          "id": "activate",
+          "datatype": "action"
+        },
+        {
+          "id": "api_connection",
+          "datatype": "api_connection"
+        },
+        {
+          "id": "settings",
+          "datatype": "json"
+        },
+        {
+          "id": "tools",
+          "datatype": "json_schema[]"
+        },
+        {
+          "id": "messages",
+          "datatype": "message[]"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "done",
+          "datatype": "action_param"
+        },
+        {
+          "id": "output",
+          "datatype": "json[]"
+        }
+      ],
+      "pos": {
+        "x": 389.28238956588837,
+        "y": 108.18527420732069
+      },
+      "size": {
+        "width": 195,
+        "height": 205
+      },
+      "label": "Tool Calling",
+      "data": {
+        "max_length": 128,
+        "max_context_length": 2048,
+        "_output": [
+          {
+            "name": "get_current_weather",
+            "arguments": {
+              "location": "Portland, OR",
+              "unit": "fahrenheit"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "WYUPoW87jFAscsoRiHJoQL",
+      "nodetype": "ChatMessageNode",
+      "input_slots": [
+        {
+          "id": "activate",
+          "datatype": "action_param"
+        },
+        {
+          "id": "text",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "message_output",
+          "datatype": "action_param"
+        },
+        {
+          "id": "cached_message",
+          "datatype": "message"
+        },
+        {
+          "id": "pull_message",
+          "datatype": "message"
+        }
+      ],
+      "pos": {
+        "x": 61.303525538035046,
+        "y": 309.1846152006537
+      },
+      "size": {
+        "width": 252,
+        "height": 125
+      },
+      "label": "Chat Message",
+      "data": {
+        "role": "user",
+        "cached_message": {
+          "role": "user",
+          "content": "What is the weather like in Portland?"
+        }
+      }
+    },
+    {
+      "id": "6cfUr3Mns35scRpV46NNui",
+      "nodetype": "ChatInputNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "submit",
+          "datatype": "action_param"
+        },
+        {
+          "id": "text",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": 397.0392749305817,
+        "y": 415.51013838798116
+      },
+      "size": {
+        "width": 272,
+        "height": 175
+      },
+      "label": "Chat Input",
+      "data": {
+        "text": "",
+        "_output": "What is the weather like in Portland?",
+        "placeholder": "Type a message..."
+      }
+    },
+    {
+      "id": "LCVs5ygvB74fkqtH4K6UCf",
+      "nodetype": "MessageDatabaseNode",
+      "input_slots": [
+        {
+          "id": "add_message",
+          "datatype": "action_param"
+        },
+        {
+          "id": "clear_database",
+          "datatype": "action"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "on_update",
+          "datatype": "action"
+        },
+        {
+          "id": "messages",
+          "datatype": "message[]"
+        },
+        {
+          "id": "message_count",
+          "datatype": "int"
+        }
+      ],
+      "pos": {
+        "x": 949.8266660595402,
+        "y": -167.40410817231637
+      },
+      "size": {
+        "width": 233,
+        "height": 216
+      },
+      "label": "Message Database",
+      "data": {
+        "messages": [],
+        "message_count": 0
+      }
+    },
+    {
+      "id": "KwMDzY8Ps5a4aHwpMPB2zd",
+      "nodetype": "SequentialActivationNode",
+      "input_slots": [
+        {
+          "id": "action",
+          "datatype": "action_param"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "out1",
+          "datatype": "action_param"
+        },
+        {
+          "id": "out2",
+          "datatype": "action_param"
+        },
+        {
+          "id": "out3",
+          "datatype": "action_param"
+        }
+      ],
+      "pos": {
+        "x": 390.9690030285107,
+        "y": -4.139193958789136
+      },
+      "size": {
+        "width": 133,
+        "height": 109
+      },
+      "label": "Sequential Activation",
+      "data": {}
+    },
+    {
+      "id": "mom6CoBMKxoACqRPwFT8ec",
+      "nodetype": "ActionMergerNode",
+      "input_slots": [
+        {
+          "id": "in1",
+          "datatype": "action_param"
+        },
+        {
+          "id": "in2",
+          "datatype": "action_param"
+        },
+        {
+          "id": "in3",
+          "datatype": "action_param"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "out",
+          "datatype": "action_param"
+        }
+      ],
+      "pos": {
+        "x": 817.9151343525779,
+        "y": -168.07278194814828
+      },
+      "size": {
+        "width": 106,
+        "height": 109
+      },
+      "label": "Action Merger",
+      "data": {}
+    },
+    {
+      "id": "EfHBsQAZzHfUxmVCp8XTW7",
+      "nodetype": "ChatDisplayNode",
+      "input_slots": [
+        {
+          "id": "update",
+          "datatype": "action"
+        },
+        {
+          "id": "messages",
+          "datatype": "message[]"
+        }
+      ],
+      "output_slots": [],
+      "pos": {
+        "x": 773.5639958761312,
+        "y": 213.7114538089585
+      },
+      "size": {
+        "width": 435,
+        "height": 465
+      },
+      "label": "Chat Display",
+      "data": {
+        "messages": [],
+        "message_count": 0,
+        "auto_scroll": true
+      }
+    },
+    {
+      "id": "ipq9X8cre2F2728eEQk2pJ",
+      "nodetype": "ChatMessageNode",
+      "input_slots": [
+        {
+          "id": "activate",
+          "datatype": "action_param"
+        },
+        {
+          "id": "text",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "message_output",
+          "datatype": "action_param"
+        },
+        {
+          "id": "cached_message",
+          "datatype": "message"
+        },
+        {
+          "id": "pull_message",
+          "datatype": "message"
+        }
+      ],
+      "pos": {
+        "x": 537.8170695764073,
+        "y": -159.11715401386806
+      },
+      "size": {
+        "width": 252,
+        "height": 125
+      },
+      "label": "Chat Message",
+      "data": {
+        "role": "assistant",
+        "cached_message": null
+      }
+    },
+    {
+      "id": "aguuXnFsRyFwoWTzbiBsFL",
+      "nodetype": "ToStringNode",
+      "input_slots": [
+        {
+          "id": "input",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": 392.5189160296033,
+        "y": -88.43156580190929
+      },
+      "size": {
+        "width": 130,
+        "height": 69
+      },
+      "label": "To String",
+      "data": {}
+    },
+    {
+      "id": "CYZw36BqSzQVA3YSUbfpb3",
+      "nodetype": "JSONSchemaNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "schema",
+          "datatype": "json_schema"
+        }
+      ],
+      "pos": {
+        "x": -479.82469624812194,
+        "y": 99.88654221932518
+      },
+      "size": {
+        "width": 364,
+        "height": 585
+      },
+      "label": "JSON Schema",
+      "data": {
+        "title": "get_current_weather",
+        "description": "Get the current weather in a given location",
+        "properties": "[{\"id\":\"1760840111602\",\"title\":\"location\",\"description\":\"The city and state, e.g. San Francisco, CA\",\"type\":\"string\",\"custom\":\"\",\"name\":\"location\"},{\"id\":\"1760840127651\",\"title\":\"unit\",\"description\":\"\",\"type\":\"string\",\"custom\":\"{\\\"enum\\\": [\\\"celsius\\\", \\\"fahrenheit\\\"]}\",\"name\":\"unit\"}]",
+        "required": "location",
+        "name": "get_current_weather"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edgeid": "edge_MqWLarqTU33TfZgpbSXFt8-connection_X2krt4YoGGqbkXRWpBGChF-api_connection",
+      "src_id": "MqWLarqTU33TfZgpbSXFt8",
+      "src_slot": "connection",
+      "dst_id": "X2krt4YoGGqbkXRWpBGChF",
+      "dst_slot": "api_connection"
+    },
+    {
+      "edgeid": "edge_KeVaZfoxuF5NQnv2u7PDWr-settings_X2krt4YoGGqbkXRWpBGChF-settings",
+      "src_id": "KeVaZfoxuF5NQnv2u7PDWr",
+      "src_slot": "settings",
+      "dst_id": "X2krt4YoGGqbkXRWpBGChF",
+      "dst_slot": "settings"
+    },
+    {
+      "edgeid": "edge_NXVqRPBWVwEJmqebKRQNMo-output_X2krt4YoGGqbkXRWpBGChF-tools",
+      "src_id": "NXVqRPBWVwEJmqebKRQNMo",
+      "src_slot": "output",
+      "dst_id": "X2krt4YoGGqbkXRWpBGChF",
+      "dst_slot": "tools"
+    },
+    {
+      "edgeid": "edge_BLjdfVZSnZS86yHdpNCV82-output_X2krt4YoGGqbkXRWpBGChF-messages",
+      "src_id": "BLjdfVZSnZS86yHdpNCV82",
+      "src_slot": "output",
+      "dst_id": "X2krt4YoGGqbkXRWpBGChF",
+      "dst_slot": "messages"
+    },
+    {
+      "edgeid": "edge_WYUPoW87jFAscsoRiHJoQL-cached_message_BLjdfVZSnZS86yHdpNCV82-input",
+      "src_id": "WYUPoW87jFAscsoRiHJoQL",
+      "src_slot": "cached_message",
+      "dst_id": "BLjdfVZSnZS86yHdpNCV82",
+      "dst_slot": "input"
+    },
+    {
+      "edgeid": "edge_6cfUr3Mns35scRpV46NNui-submit_WYUPoW87jFAscsoRiHJoQL-activate",
+      "src_id": "6cfUr3Mns35scRpV46NNui",
+      "src_slot": "submit",
+      "dst_id": "WYUPoW87jFAscsoRiHJoQL",
+      "dst_slot": "activate"
+    },
+    {
+      "edgeid": "edge_WYUPoW87jFAscsoRiHJoQL-message_output_KwMDzY8Ps5a4aHwpMPB2zd-action",
+      "src_id": "WYUPoW87jFAscsoRiHJoQL",
+      "src_slot": "message_output",
+      "dst_id": "KwMDzY8Ps5a4aHwpMPB2zd",
+      "dst_slot": "action"
+    },
+    {
+      "edgeid": "edge_mom6CoBMKxoACqRPwFT8ec-out_LCVs5ygvB74fkqtH4K6UCf-add_message",
+      "src_id": "mom6CoBMKxoACqRPwFT8ec",
+      "src_slot": "out",
+      "dst_id": "LCVs5ygvB74fkqtH4K6UCf",
+      "dst_slot": "add_message"
+    },
+    {
+      "edgeid": "edge_KwMDzY8Ps5a4aHwpMPB2zd-out1_mom6CoBMKxoACqRPwFT8ec-in1",
+      "src_id": "KwMDzY8Ps5a4aHwpMPB2zd",
+      "src_slot": "out1",
+      "dst_id": "mom6CoBMKxoACqRPwFT8ec",
+      "dst_slot": "in1"
+    },
+    {
+      "edgeid": "edge_KwMDzY8Ps5a4aHwpMPB2zd-out2_X2krt4YoGGqbkXRWpBGChF-activate",
+      "src_id": "KwMDzY8Ps5a4aHwpMPB2zd",
+      "src_slot": "out2",
+      "dst_id": "X2krt4YoGGqbkXRWpBGChF",
+      "dst_slot": "activate"
+    },
+    {
+      "edgeid": "edge_LCVs5ygvB74fkqtH4K6UCf-on_update_EfHBsQAZzHfUxmVCp8XTW7-update",
+      "src_id": "LCVs5ygvB74fkqtH4K6UCf",
+      "src_slot": "on_update",
+      "dst_id": "EfHBsQAZzHfUxmVCp8XTW7",
+      "dst_slot": "update"
+    },
+    {
+      "edgeid": "edge_LCVs5ygvB74fkqtH4K6UCf-messages_EfHBsQAZzHfUxmVCp8XTW7-messages",
+      "src_id": "LCVs5ygvB74fkqtH4K6UCf",
+      "src_slot": "messages",
+      "dst_id": "EfHBsQAZzHfUxmVCp8XTW7",
+      "dst_slot": "messages"
+    },
+    {
+      "edgeid": "edge_X2krt4YoGGqbkXRWpBGChF-done_ipq9X8cre2F2728eEQk2pJ-activate",
+      "src_id": "X2krt4YoGGqbkXRWpBGChF",
+      "src_slot": "done",
+      "dst_id": "ipq9X8cre2F2728eEQk2pJ",
+      "dst_slot": "activate"
+    },
+    {
+      "edgeid": "edge_X2krt4YoGGqbkXRWpBGChF-output_aguuXnFsRyFwoWTzbiBsFL-input",
+      "src_id": "X2krt4YoGGqbkXRWpBGChF",
+      "src_slot": "output",
+      "dst_id": "aguuXnFsRyFwoWTzbiBsFL",
+      "dst_slot": "input"
+    },
+    {
+      "edgeid": "edge_aguuXnFsRyFwoWTzbiBsFL-output_ipq9X8cre2F2728eEQk2pJ-text",
+      "src_id": "aguuXnFsRyFwoWTzbiBsFL",
+      "src_slot": "output",
+      "dst_id": "ipq9X8cre2F2728eEQk2pJ",
+      "dst_slot": "text"
+    },
+    {
+      "edgeid": "edge_ipq9X8cre2F2728eEQk2pJ-message_output_mom6CoBMKxoACqRPwFT8ec-in2",
+      "src_id": "ipq9X8cre2F2728eEQk2pJ",
+      "src_slot": "message_output",
+      "dst_id": "mom6CoBMKxoACqRPwFT8ec",
+      "dst_slot": "in2"
+    },
+    {
+      "edgeid": "edge_CYZw36BqSzQVA3YSUbfpb3-schema_NXVqRPBWVwEJmqebKRQNMo-input",
+      "src_id": "CYZw36BqSzQVA3YSUbfpb3",
+      "src_slot": "schema",
+      "dst_id": "NXVqRPBWVwEJmqebKRQNMo",
+      "dst_slot": "input"
+    }
+  ]
+}

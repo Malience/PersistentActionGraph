@@ -1,0 +1,1880 @@
+{
+  "nodes": [
+    {
+      "id": "aCt5vemKCRMPM3sGGiBhez",
+      "nodetype": "GetJSONNode",
+      "input_slots": [
+        {
+          "id": "json",
+          "datatype": "json"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": 10.44083114761915,
+        "y": 90.62151346953154
+      },
+      "size": {
+        "width": 176,
+        "height": 88
+      },
+      "label": "Get JSON",
+      "data": {
+        "key": "name"
+      }
+    },
+    {
+      "id": "X3kQ2qJi6hKXfcPDBivukN",
+      "nodetype": "SetJSONNode",
+      "input_slots": [
+        {
+          "id": "json",
+          "datatype": "json"
+        },
+        {
+          "id": "value",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "json"
+        }
+      ],
+      "pos": {
+        "x": 12.007825521517802,
+        "y": 183.8576787165031
+      },
+      "size": {
+        "width": 176,
+        "height": 107
+      },
+      "label": "Set JSON",
+      "data": {
+        "key": "char"
+      }
+    },
+    {
+      "id": "YMzgSmdcRoUmPZ5yVT2HFx",
+      "nodetype": "StringNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": 359.89327603000004,
+        "y": 271.12126033317475
+      },
+      "size": {
+        "width": 178,
+        "height": 88
+      },
+      "label": "String",
+      "data": {
+        "value": "USER"
+      }
+    },
+    {
+      "id": "iX3NZA9dYh6BeDu2hxLgBQ",
+      "nodetype": "TextAreaNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": 322.3067539224212,
+        "y": 375.1914839814411
+      },
+      "size": {
+        "width": 259,
+        "height": 254
+      },
+      "label": "TextArea",
+      "data": {
+        "value": "{{user}} is just your standard everyday user."
+      }
+    },
+    {
+      "id": "HTuVT7KmPEYDrGShNsb7kZ",
+      "nodetype": "SetJSONNode",
+      "input_slots": [
+        {
+          "id": "json",
+          "datatype": "json"
+        },
+        {
+          "id": "value",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "json"
+        }
+      ],
+      "pos": {
+        "x": 627.533803818011,
+        "y": 184.5196134503458
+      },
+      "size": {
+        "width": 176,
+        "height": 107
+      },
+      "label": "Set JSON",
+      "data": {
+        "key": "user"
+      }
+    },
+    {
+      "id": "koQ5YqcqNpw62GGuZ8idhQ",
+      "nodetype": "SetJSONNode",
+      "input_slots": [
+        {
+          "id": "json",
+          "datatype": "json"
+        },
+        {
+          "id": "value",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "json"
+        }
+      ],
+      "pos": {
+        "x": 624.1168115164646,
+        "y": 393.16991420298973
+      },
+      "size": {
+        "width": 176,
+        "height": 107
+      },
+      "label": "Set JSON",
+      "data": {
+        "key": "persona"
+      }
+    },
+    {
+      "id": "m9DoNyErDHN9EtgpkYDvAt",
+      "nodetype": "GetJSONNode",
+      "input_slots": [
+        {
+          "id": "json",
+          "datatype": "json"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": 1033.7222596616398,
+        "y": 92.61552218806443
+      },
+      "size": {
+        "width": 176,
+        "height": 88
+      },
+      "label": "Get JSON",
+      "data": {
+        "key": "description"
+      }
+    },
+    {
+      "id": "67ZUYejQCv5rS8f2poD7hT",
+      "nodetype": "JSONFormatNode",
+      "input_slots": [
+        {
+          "id": "json_data",
+          "datatype": "json"
+        },
+        {
+          "id": "template",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "formatted",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": 1041.8498361360048,
+        "y": 187.12417177613236
+      },
+      "size": {
+        "width": 165,
+        "height": 89
+      },
+      "label": "JSON Format",
+      "data": {}
+    },
+    {
+      "id": "TYQLevZ8ctEkmHnAPgrvuQ",
+      "nodetype": "SetJSONNode",
+      "input_slots": [
+        {
+          "id": "json",
+          "datatype": "json"
+        },
+        {
+          "id": "value",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "json"
+        }
+      ],
+      "pos": {
+        "x": 1035.9396532198934,
+        "y": 282.1382892022977
+      },
+      "size": {
+        "width": 176,
+        "height": 107
+      },
+      "label": "Set JSON",
+      "data": {
+        "key": "description"
+      }
+    },
+    {
+      "id": "GxenMhuZKnEexaGvGLWB2D",
+      "nodetype": "ConsoleNode",
+      "input_slots": [
+        {
+          "id": "trigger",
+          "datatype": "action_param"
+        },
+        {
+          "id": "input",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [],
+      "pos": {
+        "x": 1517.1005518198278,
+        "y": 756.2104322523875
+      },
+      "size": {
+        "width": 106,
+        "height": 89
+      },
+      "label": "Console",
+      "data": {}
+    },
+    {
+      "id": "SBzmqkByejy5DPfrXTtvRs",
+      "nodetype": "TextAreaNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": 360.6318809504457,
+        "y": 886.4441854469001
+      },
+      "size": {
+        "width": 285,
+        "height": 241
+      },
+      "label": "TextArea",
+      "data": {
+        "value": "{{system}}\n{{description}}\n{{char}}'s personality:\n{{personality}}\nScenario: {{scenario}}\n{{persona}}"
+      }
+    },
+    {
+      "id": "KP8rxZmQHQoKYjxGfcgyrQ",
+      "nodetype": "JSONFormatNode",
+      "input_slots": [
+        {
+          "id": "json_data",
+          "datatype": "json"
+        },
+        {
+          "id": "template",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "formatted",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": 626.2638827626449,
+        "y": 297.0712921829081
+      },
+      "size": {
+        "width": 165,
+        "height": 89
+      },
+      "label": "JSON Format",
+      "data": {}
+    },
+    {
+      "id": "YarYDW3YYHAsFL2o4U7G6Q",
+      "nodetype": "TextAreaNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": 306.1598913668629,
+        "y": 645.1104795753923
+      },
+      "size": {
+        "width": 359,
+        "height": 171
+      },
+      "label": "TextArea",
+      "data": {
+        "value": "Write {{char}}'s next reply in a fictional chat between {{char}} and {{user}}."
+      }
+    },
+    {
+      "id": "Y3Z5yK3yh7Kw5S73JRMJiN",
+      "nodetype": "GetJSONNode",
+      "input_slots": [
+        {
+          "id": "json",
+          "datatype": "json"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": 1273.5660411168515,
+        "y": 92.7099441030416
+      },
+      "size": {
+        "width": 176,
+        "height": 88
+      },
+      "label": "Get JSON",
+      "data": {
+        "key": "first_mes"
+      }
+    },
+    {
+      "id": "Fg64niojrxRfSzG3K5qqFf",
+      "nodetype": "JSONFormatNode",
+      "input_slots": [
+        {
+          "id": "json_data",
+          "datatype": "json"
+        },
+        {
+          "id": "template",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "formatted",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": 1274.7937768007666,
+        "y": 192.15653450016148
+      },
+      "size": {
+        "width": 165,
+        "height": 89
+      },
+      "label": "JSON Format",
+      "data": {}
+    },
+    {
+      "id": "a73YPWQEkRkwM2HFMrfiA9",
+      "nodetype": "SetJSONNode",
+      "input_slots": [
+        {
+          "id": "json",
+          "datatype": "json"
+        },
+        {
+          "id": "value",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "json"
+        }
+      ],
+      "pos": {
+        "x": 1272.8108764662757,
+        "y": 287.19443606083485
+      },
+      "size": {
+        "width": 176,
+        "height": 107
+      },
+      "label": "Set JSON",
+      "data": {
+        "key": "first_mes"
+      }
+    },
+    {
+      "id": "YAaqu68krXBodQ5VbMfUCF",
+      "nodetype": "JSONFormatNode",
+      "input_slots": [
+        {
+          "id": "json_data",
+          "datatype": "json"
+        },
+        {
+          "id": "template",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "formatted",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": 916.849926624147,
+        "y": 964.0180342429458
+      },
+      "size": {
+        "width": 165,
+        "height": 89
+      },
+      "label": "JSON Format",
+      "data": {}
+    },
+    {
+      "id": "ZrTUSTekRQrFy4Xsuktgcc",
+      "nodetype": "ConditionalDataNode",
+      "input_slots": [
+        {
+          "id": "condition",
+          "datatype": "bool"
+        },
+        {
+          "id": "true",
+          "datatype": "any"
+        },
+        {
+          "id": "false",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": 1013.5931455038076,
+        "y": 733.4311944886371
+      },
+      "size": {
+        "width": 130,
+        "height": 109
+      },
+      "label": "Conditional Data",
+      "data": {}
+    },
+    {
+      "id": "HYu7LHLpNVfo3BtLFYrMyE",
+      "nodetype": "StringCompareNode",
+      "input_slots": [
+        {
+          "id": "A",
+          "datatype": "string"
+        },
+        {
+          "id": "B",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "result",
+          "datatype": "bool"
+        }
+      ],
+      "pos": {
+        "x": 1377.5702974010348,
+        "y": 594.3126360320032
+      },
+      "size": {
+        "width": 122,
+        "height": 89
+      },
+      "label": "String Compare",
+      "data": {}
+    },
+    {
+      "id": "MutnTgb5hbfoYLzMkeiLvE",
+      "nodetype": "GetJSONNode",
+      "input_slots": [
+        {
+          "id": "json",
+          "datatype": "json"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": 1106.084460679926,
+        "y": 518.7762100628311
+      },
+      "size": {
+        "width": 176,
+        "height": 88
+      },
+      "label": "Get JSON",
+      "data": {
+        "key": "system_prompt"
+      }
+    },
+    {
+      "id": "KTBs8BuFt4WzoV9S7ceWrH",
+      "nodetype": "ButtonNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "pressed",
+          "datatype": "action"
+        }
+      ],
+      "pos": {
+        "x": 1782.835171246115,
+        "y": 480.24568791303057
+      },
+      "size": {
+        "width": 149,
+        "height": 91
+      },
+      "label": "Button Node",
+      "data": {
+        "button_label": "Press!"
+      }
+    },
+    {
+      "id": "jn6BvEkHDVkisWUp2CT2am",
+      "nodetype": "StringNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": 1101.658820843818,
+        "y": 621.7423328662303
+      },
+      "size": {
+        "width": 178,
+        "height": 88
+      },
+      "label": "String",
+      "data": {
+        "value": ""
+      }
+    },
+    {
+      "id": "g3BVL4xh7TrfzjMdErH4YJ",
+      "nodetype": "JSONFormatNode",
+      "input_slots": [
+        {
+          "id": "json_data",
+          "datatype": "json"
+        },
+        {
+          "id": "template",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "formatted",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": 1165.6471213140146,
+        "y": 744.7989613224355
+      },
+      "size": {
+        "width": 165,
+        "height": 89
+      },
+      "label": "JSON Format",
+      "data": {}
+    },
+    {
+      "id": "5nHSgNPjArahNc8urJNpEu",
+      "nodetype": "SetJSONNode",
+      "input_slots": [
+        {
+          "id": "json",
+          "datatype": "json"
+        },
+        {
+          "id": "value",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "json"
+        }
+      ],
+      "pos": {
+        "x": 1108.8260874849761,
+        "y": 848.0969779035628
+      },
+      "size": {
+        "width": 176,
+        "height": 107
+      },
+      "label": "Set JSON",
+      "data": {
+        "key": "system_prompt"
+      }
+    },
+    {
+      "id": "WM9o6aZAKACyodfUAMAuRV",
+      "nodetype": "SetJSONNode",
+      "input_slots": [
+        {
+          "id": "json",
+          "datatype": "json"
+        },
+        {
+          "id": "value",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "json"
+        }
+      ],
+      "pos": {
+        "x": 1108.0030752404814,
+        "y": 965.1877729332876
+      },
+      "size": {
+        "width": 176,
+        "height": 107
+      },
+      "label": "Set JSON",
+      "data": {
+        "key": "story_string"
+      }
+    },
+    {
+      "id": "9o5ezRLZcu3TMtAoXTVdHT",
+      "nodetype": "ChatGeneratorNode",
+      "input_slots": [
+        {
+          "id": "activate",
+          "datatype": "action_param"
+        },
+        {
+          "id": "api_connection",
+          "datatype": "api_connection"
+        },
+        {
+          "id": "settings",
+          "datatype": "json"
+        },
+        {
+          "id": "messages",
+          "datatype": "message[]"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "done",
+          "datatype": "action_param"
+        },
+        {
+          "id": "output",
+          "datatype": "message"
+        }
+      ],
+      "pos": {
+        "x": 236.1281930379909,
+        "y": 1309.5874391221516
+      },
+      "size": {
+        "width": 195,
+        "height": 185
+      },
+      "label": "Chat Generator",
+      "data": {
+        "max_length": 256,
+        "max_context_length": 2048,
+        "_output": {}
+      }
+    },
+    {
+      "id": "3sJtqkHCYTWbjMEfmm5Ezk",
+      "nodetype": "APISettingsNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "settings",
+          "datatype": "json"
+        }
+      ],
+      "pos": {
+        "x": -106.57572222502306,
+        "y": 961.7957754121652
+      },
+      "size": {
+        "width": 183,
+        "height": 349
+      },
+      "label": "API Settings",
+      "data": {
+        "temperature": 0.7,
+        "top_k": 0,
+        "top_p": 1,
+        "typical": 1,
+        "top_a": 0,
+        "tfs": 1,
+        "rep_pen": 1.05,
+        "rep_pen_range": 4096,
+        "rep_pen_slope": 1
+      }
+    },
+    {
+      "id": "BH5qGjhUpKxaEvhsfrRBP9",
+      "nodetype": "APIConnectionNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "connection",
+          "datatype": "api_connection"
+        }
+      ],
+      "pos": {
+        "x": -128.96040112183448,
+        "y": 837.8190922913631
+      },
+      "size": {
+        "width": 218,
+        "height": 115
+      },
+      "label": "API Connection",
+      "data": {
+        "api_url": "http://127.0.0.1:5001/v1/chat/completions"
+      }
+    },
+    {
+      "id": "3dqRpy3xUaWQwedMyDpL7h",
+      "nodetype": "MessageInputNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "submit",
+          "datatype": "action_param"
+        },
+        {
+          "id": "message",
+          "datatype": "message"
+        }
+      ],
+      "pos": {
+        "x": 179.90902730032042,
+        "y": 1689.7735991937468
+      },
+      "size": {
+        "width": 392,
+        "height": 193
+      },
+      "label": "Message Input",
+      "data": {
+        "text": "",
+        "_output": "\"Hello? Who... who are you?\"",
+        "placeholder": "Type a message...",
+        "role": "user",
+        "cached_message": {
+          "role": "user",
+          "content": "\"Hello? Who... who are you?\""
+        }
+      }
+    },
+    {
+      "id": "8DJemArFbLEKi3iFMgs85G",
+      "nodetype": "MessageDatabaseNode",
+      "input_slots": [
+        {
+          "id": "add_message",
+          "datatype": "action_param"
+        },
+        {
+          "id": "clear_database",
+          "datatype": "action"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "on_update",
+          "datatype": "action"
+        },
+        {
+          "id": "messages",
+          "datatype": "message[]"
+        },
+        {
+          "id": "message_count",
+          "datatype": "int"
+        }
+      ],
+      "pos": {
+        "x": 773.3143482573369,
+        "y": 1342.3353166579604
+      },
+      "size": {
+        "width": 233,
+        "height": 216
+      },
+      "label": "Message Database",
+      "data": {
+        "messages": [],
+        "message_count": 0
+      }
+    },
+    {
+      "id": "4i8jSVKmyp6w7YptJNVk8o",
+      "nodetype": "IntComparisonNode",
+      "input_slots": [
+        {
+          "id": "A",
+          "datatype": "int"
+        },
+        {
+          "id": "B",
+          "datatype": "int"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "result",
+          "datatype": "bool"
+        }
+      ],
+      "pos": {
+        "x": 1306.0802721260386,
+        "y": 1383.5457150272412
+      },
+      "size": {
+        "width": 137,
+        "height": 125
+      },
+      "label": "Int Comparison",
+      "data": {
+        "operation": "equals"
+      }
+    },
+    {
+      "id": "NyjwUhVtMvWwcg9R67uQHS",
+      "nodetype": "IntNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "int"
+        }
+      ],
+      "pos": {
+        "x": 1146.4711622022908,
+        "y": 1410.186024623257
+      },
+      "size": {
+        "width": 138,
+        "height": 88
+      },
+      "label": "Int",
+      "data": {
+        "value": 0
+      }
+    },
+    {
+      "id": "5pGZ2aTq7moyQcGk4G7AHD",
+      "nodetype": "ConditionalActivationNode",
+      "input_slots": [
+        {
+          "id": "action",
+          "datatype": "action_param"
+        },
+        {
+          "id": "condition",
+          "datatype": "bool"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "true",
+          "datatype": "action_param"
+        },
+        {
+          "id": "false",
+          "datatype": "action_param"
+        }
+      ],
+      "pos": {
+        "x": 1296.3485963703904,
+        "y": 1283.7473019372108
+      },
+      "size": {
+        "width": 136,
+        "height": 89
+      },
+      "label": "Conditional Activation",
+      "data": {}
+    },
+    {
+      "id": "TNLukEECPffw3mveKVDouX",
+      "nodetype": "ChatMessageNode",
+      "input_slots": [
+        {
+          "id": "activate",
+          "datatype": "action_param"
+        },
+        {
+          "id": "text",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "message_output",
+          "datatype": "action_param"
+        },
+        {
+          "id": "cached_message",
+          "datatype": "message"
+        },
+        {
+          "id": "pull_message",
+          "datatype": "message"
+        }
+      ],
+      "pos": {
+        "x": 1624.2306881496038,
+        "y": 1321.9956174237439
+      },
+      "size": {
+        "width": 252,
+        "height": 145
+      },
+      "label": "Chat Message",
+      "data": {
+        "role": "assistant",
+        "cached_message": {
+          "role": "assistant",
+          "content": ""
+        }
+      }
+    },
+    {
+      "id": "T9QAr8oZM3nKtpKZZVH96D",
+      "nodetype": "ActionSplitterNode",
+      "input_slots": [
+        {
+          "id": "in",
+          "datatype": "action_param"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "out1",
+          "datatype": "action_param"
+        },
+        {
+          "id": "out2",
+          "datatype": "action_param"
+        },
+        {
+          "id": "out3",
+          "datatype": "action_param"
+        }
+      ],
+      "pos": {
+        "x": 1722.276800688563,
+        "y": 1039.8957265239205
+      },
+      "size": {
+        "width": 110,
+        "height": 109
+      },
+      "label": "Action Splitter",
+      "data": {}
+    },
+    {
+      "id": "QCm8YfC3yNPJJfNjMLaN4P",
+      "nodetype": "ActionMergerNode",
+      "input_slots": [
+        {
+          "id": "in1",
+          "datatype": "action_param"
+        },
+        {
+          "id": "in2",
+          "datatype": "action_param"
+        },
+        {
+          "id": "in3",
+          "datatype": "action_param"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "out",
+          "datatype": "action_param"
+        }
+      ],
+      "pos": {
+        "x": 1330.9794854064157,
+        "y": 1129.7902909039085
+      },
+      "size": {
+        "width": 106,
+        "height": 109
+      },
+      "label": "Action Merger",
+      "data": {}
+    },
+    {
+      "id": "XkEQeMFSGzGdz3yQ6rxviJ",
+      "nodetype": "ButtonNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "pressed",
+          "datatype": "action"
+        }
+      ],
+      "pos": {
+        "x": 983.7684333471773,
+        "y": 1194.5418354873889
+      },
+      "size": {
+        "width": 149,
+        "height": 91
+      },
+      "label": "Button Node",
+      "data": {
+        "button_label": "Press!"
+      }
+    },
+    {
+      "id": "nQxRWbFroWj7bXXYqXKs7w",
+      "nodetype": "GetJSONNode",
+      "input_slots": [
+        {
+          "id": "json",
+          "datatype": "json"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": 1623.2091465304825,
+        "y": 1220.068410863968
+      },
+      "size": {
+        "width": 176,
+        "height": 88
+      },
+      "label": "Get JSON",
+      "data": {
+        "key": "first_mes"
+      }
+    },
+    {
+      "id": "QVitetXUEEsbzm8T4gv375",
+      "nodetype": "ActionDataNode",
+      "input_slots": [
+        {
+          "id": "action",
+          "datatype": "action"
+        },
+        {
+          "id": "data",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "action_param",
+          "datatype": "action_param"
+        }
+      ],
+      "pos": {
+        "x": 1636.5126384751063,
+        "y": 1474.349499831751
+      },
+      "size": {
+        "width": 209,
+        "height": 89
+      },
+      "label": "Action Data",
+      "data": {}
+    },
+    {
+      "id": "2SgiGHDLRKXjcGoxwn9mi5",
+      "nodetype": "ChatDisplayNode",
+      "input_slots": [
+        {
+          "id": "update",
+          "datatype": "action"
+        },
+        {
+          "id": "messages",
+          "datatype": "message[]"
+        }
+      ],
+      "output_slots": [],
+      "pos": {
+        "x": 649.0257417869522,
+        "y": 1680.547371496318
+      },
+      "size": {
+        "width": 704,
+        "height": 477
+      },
+      "label": "Chat Display",
+      "data": {
+        "messages": [],
+        "message_count": 0,
+        "auto_scroll": true
+      }
+    },
+    {
+      "id": "NBhDqHvLEuadJJKDmsPYiH",
+      "nodetype": "ActionMergerNode",
+      "input_slots": [
+        {
+          "id": "in1",
+          "datatype": "action_param"
+        },
+        {
+          "id": "in2",
+          "datatype": "action_param"
+        },
+        {
+          "id": "in3",
+          "datatype": "action_param"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "out",
+          "datatype": "action_param"
+        }
+      ],
+      "pos": {
+        "x": 612.7434544289379,
+        "y": 1343.1432783421765
+      },
+      "size": {
+        "width": 106,
+        "height": 109
+      },
+      "label": "Action Merger",
+      "data": {}
+    },
+    {
+      "id": "XAnFsCVmuGKqkFYrsNjJqG",
+      "nodetype": "ChatMessageNode",
+      "input_slots": [
+        {
+          "id": "activate",
+          "datatype": "action_param"
+        },
+        {
+          "id": "text",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "message_output",
+          "datatype": "action_param"
+        },
+        {
+          "id": "cached_message",
+          "datatype": "message"
+        },
+        {
+          "id": "pull_message",
+          "datatype": "message"
+        }
+      ],
+      "pos": {
+        "x": -327.14228881196436,
+        "y": 1400.9114368429082
+      },
+      "size": {
+        "width": 252,
+        "height": 145
+      },
+      "label": "Chat Message",
+      "data": {
+        "role": "system",
+        "cached_message": {
+          "role": "system",
+          "content": ""
+        }
+      }
+    },
+    {
+      "id": "nfANomboX9pUN9mtTqNGWW",
+      "nodetype": "GetJSONNode",
+      "input_slots": [
+        {
+          "id": "json",
+          "datatype": "json"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": -329.7000498560194,
+        "y": 1304.5585145013897
+      },
+      "size": {
+        "width": 176,
+        "height": 88
+      },
+      "label": "Get JSON",
+      "data": {
+        "key": "story_string"
+      }
+    },
+    {
+      "id": "WdguGxusK27N7snfoGMogk",
+      "nodetype": "SequentialActivationNode",
+      "input_slots": [
+        {
+          "id": "action",
+          "datatype": "action_param"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "out1",
+          "datatype": "action_param"
+        },
+        {
+          "id": "out2",
+          "datatype": "action_param"
+        },
+        {
+          "id": "out3",
+          "datatype": "action_param"
+        }
+      ],
+      "pos": {
+        "x": 445.1072918791391,
+        "y": 1511.589094321145
+      },
+      "size": {
+        "width": 133,
+        "height": 109
+      },
+      "label": "Sequential Activation",
+      "data": {}
+    },
+    {
+      "id": "Qur7QnzPJ9bhft9xNAgMFe",
+      "nodetype": "ArrayMergeNode",
+      "input_slots": [
+        {
+          "id": "array1",
+          "datatype": "any"
+        },
+        {
+          "id": "array2",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "merged",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": -207.17350077713422,
+        "y": 1627.58967970935
+      },
+      "size": {
+        "width": 145,
+        "height": 89
+      },
+      "label": "Array Merge",
+      "data": {}
+    },
+    {
+      "id": "hbagjmgKMA8MdjSuZMyb4f",
+      "nodetype": "ToArrayNode",
+      "input_slots": [
+        {
+          "id": "input",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": -208.70138277845803,
+        "y": 1549.6333198220543
+      },
+      "size": {
+        "width": 130,
+        "height": 69
+      },
+      "label": "To Array",
+      "data": {}
+    },
+    {
+      "id": "cLYcyrnspmYxcXBXwanhe4",
+      "nodetype": "CommentNode",
+      "input_slots": [],
+      "output_slots": [],
+      "pos": {
+        "x": 800.8216509680987,
+        "y": 1176.2985010801667
+      },
+      "size": {
+        "width": 158,
+        "height": 116
+      },
+      "label": "Comment",
+      "data": {
+        "value": "Clearing the database will reset the First Message!\nYou could also click this button ----------------->>>"
+      }
+    },
+    {
+      "id": "PxQvAMnjdKeKw4a53SN6mo",
+      "nodetype": "CharacterCardNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "on_load",
+          "datatype": "action_param"
+        },
+        {
+          "id": "character_data",
+          "datatype": "json"
+        }
+      ],
+      "pos": {
+        "x": -105.88467533236549,
+        "y": 385.6714663009693
+      },
+      "size": {
+        "width": 245,
+        "height": 269
+      },
+      "label": "Character Card",
+      "data": {
+        "character_data": {}
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edgeid": "edge_aCt5vemKCRMPM3sGGiBhez-value_X3kQ2qJi6hKXfcPDBivukN-value",
+      "src_id": "aCt5vemKCRMPM3sGGiBhez",
+      "src_slot": "value",
+      "dst_id": "X3kQ2qJi6hKXfcPDBivukN",
+      "dst_slot": "value"
+    },
+    {
+      "edgeid": "edge_X3kQ2qJi6hKXfcPDBivukN-output_HTuVT7KmPEYDrGShNsb7kZ-json",
+      "src_id": "X3kQ2qJi6hKXfcPDBivukN",
+      "src_slot": "output",
+      "dst_id": "HTuVT7KmPEYDrGShNsb7kZ",
+      "dst_slot": "json"
+    },
+    {
+      "edgeid": "edge_YMzgSmdcRoUmPZ5yVT2HFx-value_HTuVT7KmPEYDrGShNsb7kZ-value",
+      "src_id": "YMzgSmdcRoUmPZ5yVT2HFx",
+      "src_slot": "value",
+      "dst_id": "HTuVT7KmPEYDrGShNsb7kZ",
+      "dst_slot": "value"
+    },
+    {
+      "edgeid": "edge_HTuVT7KmPEYDrGShNsb7kZ-output_koQ5YqcqNpw62GGuZ8idhQ-json",
+      "src_id": "HTuVT7KmPEYDrGShNsb7kZ",
+      "src_slot": "output",
+      "dst_id": "koQ5YqcqNpw62GGuZ8idhQ",
+      "dst_slot": "json"
+    },
+    {
+      "edgeid": "edge_koQ5YqcqNpw62GGuZ8idhQ-output_m9DoNyErDHN9EtgpkYDvAt-json",
+      "src_id": "koQ5YqcqNpw62GGuZ8idhQ",
+      "src_slot": "output",
+      "dst_id": "m9DoNyErDHN9EtgpkYDvAt",
+      "dst_slot": "json"
+    },
+    {
+      "edgeid": "edge_koQ5YqcqNpw62GGuZ8idhQ-output_67ZUYejQCv5rS8f2poD7hT-json_data",
+      "src_id": "koQ5YqcqNpw62GGuZ8idhQ",
+      "src_slot": "output",
+      "dst_id": "67ZUYejQCv5rS8f2poD7hT",
+      "dst_slot": "json_data"
+    },
+    {
+      "edgeid": "edge_koQ5YqcqNpw62GGuZ8idhQ-output_TYQLevZ8ctEkmHnAPgrvuQ-json",
+      "src_id": "koQ5YqcqNpw62GGuZ8idhQ",
+      "src_slot": "output",
+      "dst_id": "TYQLevZ8ctEkmHnAPgrvuQ",
+      "dst_slot": "json"
+    },
+    {
+      "edgeid": "edge_m9DoNyErDHN9EtgpkYDvAt-value_67ZUYejQCv5rS8f2poD7hT-template",
+      "src_id": "m9DoNyErDHN9EtgpkYDvAt",
+      "src_slot": "value",
+      "dst_id": "67ZUYejQCv5rS8f2poD7hT",
+      "dst_slot": "template"
+    },
+    {
+      "edgeid": "edge_67ZUYejQCv5rS8f2poD7hT-formatted_TYQLevZ8ctEkmHnAPgrvuQ-value",
+      "src_id": "67ZUYejQCv5rS8f2poD7hT",
+      "src_slot": "formatted",
+      "dst_id": "TYQLevZ8ctEkmHnAPgrvuQ",
+      "dst_slot": "value"
+    },
+    {
+      "edgeid": "edge_HTuVT7KmPEYDrGShNsb7kZ-output_KP8rxZmQHQoKYjxGfcgyrQ-json_data",
+      "src_id": "HTuVT7KmPEYDrGShNsb7kZ",
+      "src_slot": "output",
+      "dst_id": "KP8rxZmQHQoKYjxGfcgyrQ",
+      "dst_slot": "json_data"
+    },
+    {
+      "edgeid": "edge_iX3NZA9dYh6BeDu2hxLgBQ-value_KP8rxZmQHQoKYjxGfcgyrQ-template",
+      "src_id": "iX3NZA9dYh6BeDu2hxLgBQ",
+      "src_slot": "value",
+      "dst_id": "KP8rxZmQHQoKYjxGfcgyrQ",
+      "dst_slot": "template"
+    },
+    {
+      "edgeid": "edge_KP8rxZmQHQoKYjxGfcgyrQ-formatted_koQ5YqcqNpw62GGuZ8idhQ-value",
+      "src_id": "KP8rxZmQHQoKYjxGfcgyrQ",
+      "src_slot": "formatted",
+      "dst_id": "koQ5YqcqNpw62GGuZ8idhQ",
+      "dst_slot": "value"
+    },
+    {
+      "edgeid": "edge_TYQLevZ8ctEkmHnAPgrvuQ-output_Y3Z5yK3yh7Kw5S73JRMJiN-json",
+      "src_id": "TYQLevZ8ctEkmHnAPgrvuQ",
+      "src_slot": "output",
+      "dst_id": "Y3Z5yK3yh7Kw5S73JRMJiN",
+      "dst_slot": "json"
+    },
+    {
+      "edgeid": "edge_Y3Z5yK3yh7Kw5S73JRMJiN-value_Fg64niojrxRfSzG3K5qqFf-template",
+      "src_id": "Y3Z5yK3yh7Kw5S73JRMJiN",
+      "src_slot": "value",
+      "dst_id": "Fg64niojrxRfSzG3K5qqFf",
+      "dst_slot": "template"
+    },
+    {
+      "edgeid": "edge_TYQLevZ8ctEkmHnAPgrvuQ-output_Fg64niojrxRfSzG3K5qqFf-json_data",
+      "src_id": "TYQLevZ8ctEkmHnAPgrvuQ",
+      "src_slot": "output",
+      "dst_id": "Fg64niojrxRfSzG3K5qqFf",
+      "dst_slot": "json_data"
+    },
+    {
+      "edgeid": "edge_TYQLevZ8ctEkmHnAPgrvuQ-output_a73YPWQEkRkwM2HFMrfiA9-json",
+      "src_id": "TYQLevZ8ctEkmHnAPgrvuQ",
+      "src_slot": "output",
+      "dst_id": "a73YPWQEkRkwM2HFMrfiA9",
+      "dst_slot": "json"
+    },
+    {
+      "edgeid": "edge_Fg64niojrxRfSzG3K5qqFf-formatted_a73YPWQEkRkwM2HFMrfiA9-value",
+      "src_id": "Fg64niojrxRfSzG3K5qqFf",
+      "src_slot": "formatted",
+      "dst_id": "a73YPWQEkRkwM2HFMrfiA9",
+      "dst_slot": "value"
+    },
+    {
+      "edgeid": "edge_MutnTgb5hbfoYLzMkeiLvE-value_HYu7LHLpNVfo3BtLFYrMyE-A",
+      "src_id": "MutnTgb5hbfoYLzMkeiLvE",
+      "src_slot": "value",
+      "dst_id": "HYu7LHLpNVfo3BtLFYrMyE",
+      "dst_slot": "A"
+    },
+    {
+      "edgeid": "edge_KTBs8BuFt4WzoV9S7ceWrH-pressed_GxenMhuZKnEexaGvGLWB2D-trigger",
+      "src_id": "KTBs8BuFt4WzoV9S7ceWrH",
+      "src_slot": "pressed",
+      "dst_id": "GxenMhuZKnEexaGvGLWB2D",
+      "dst_slot": "trigger"
+    },
+    {
+      "edgeid": "edge_jn6BvEkHDVkisWUp2CT2am-value_HYu7LHLpNVfo3BtLFYrMyE-B",
+      "src_id": "jn6BvEkHDVkisWUp2CT2am",
+      "src_slot": "value",
+      "dst_id": "HYu7LHLpNVfo3BtLFYrMyE",
+      "dst_slot": "B"
+    },
+    {
+      "edgeid": "edge_a73YPWQEkRkwM2HFMrfiA9-output_MutnTgb5hbfoYLzMkeiLvE-json",
+      "src_id": "a73YPWQEkRkwM2HFMrfiA9",
+      "src_slot": "output",
+      "dst_id": "MutnTgb5hbfoYLzMkeiLvE",
+      "dst_slot": "json"
+    },
+    {
+      "edgeid": "edge_MutnTgb5hbfoYLzMkeiLvE-value_ZrTUSTekRQrFy4Xsuktgcc-false",
+      "src_id": "MutnTgb5hbfoYLzMkeiLvE",
+      "src_slot": "value",
+      "dst_id": "ZrTUSTekRQrFy4Xsuktgcc",
+      "dst_slot": "false"
+    },
+    {
+      "edgeid": "edge_YarYDW3YYHAsFL2o4U7G6Q-value_ZrTUSTekRQrFy4Xsuktgcc-true",
+      "src_id": "YarYDW3YYHAsFL2o4U7G6Q",
+      "src_slot": "value",
+      "dst_id": "ZrTUSTekRQrFy4Xsuktgcc",
+      "dst_slot": "true"
+    },
+    {
+      "edgeid": "edge_HYu7LHLpNVfo3BtLFYrMyE-result_ZrTUSTekRQrFy4Xsuktgcc-condition",
+      "src_id": "HYu7LHLpNVfo3BtLFYrMyE",
+      "src_slot": "result",
+      "dst_id": "ZrTUSTekRQrFy4Xsuktgcc",
+      "dst_slot": "condition"
+    },
+    {
+      "edgeid": "edge_a73YPWQEkRkwM2HFMrfiA9-output_g3BVL4xh7TrfzjMdErH4YJ-json_data",
+      "src_id": "a73YPWQEkRkwM2HFMrfiA9",
+      "src_slot": "output",
+      "dst_id": "g3BVL4xh7TrfzjMdErH4YJ",
+      "dst_slot": "json_data"
+    },
+    {
+      "edgeid": "edge_ZrTUSTekRQrFy4Xsuktgcc-value_g3BVL4xh7TrfzjMdErH4YJ-template",
+      "src_id": "ZrTUSTekRQrFy4Xsuktgcc",
+      "src_slot": "value",
+      "dst_id": "g3BVL4xh7TrfzjMdErH4YJ",
+      "dst_slot": "template"
+    },
+    {
+      "edgeid": "edge_g3BVL4xh7TrfzjMdErH4YJ-formatted_GxenMhuZKnEexaGvGLWB2D-input",
+      "src_id": "g3BVL4xh7TrfzjMdErH4YJ",
+      "src_slot": "formatted",
+      "dst_id": "GxenMhuZKnEexaGvGLWB2D",
+      "dst_slot": "input"
+    },
+    {
+      "edgeid": "edge_g3BVL4xh7TrfzjMdErH4YJ-formatted_5nHSgNPjArahNc8urJNpEu-value",
+      "src_id": "g3BVL4xh7TrfzjMdErH4YJ",
+      "src_slot": "formatted",
+      "dst_id": "5nHSgNPjArahNc8urJNpEu",
+      "dst_slot": "value"
+    },
+    {
+      "edgeid": "edge_a73YPWQEkRkwM2HFMrfiA9-output_5nHSgNPjArahNc8urJNpEu-json",
+      "src_id": "a73YPWQEkRkwM2HFMrfiA9",
+      "src_slot": "output",
+      "dst_id": "5nHSgNPjArahNc8urJNpEu",
+      "dst_slot": "json"
+    },
+    {
+      "edgeid": "edge_SBzmqkByejy5DPfrXTtvRs-value_YAaqu68krXBodQ5VbMfUCF-template",
+      "src_id": "SBzmqkByejy5DPfrXTtvRs",
+      "src_slot": "value",
+      "dst_id": "YAaqu68krXBodQ5VbMfUCF",
+      "dst_slot": "template"
+    },
+    {
+      "edgeid": "edge_5nHSgNPjArahNc8urJNpEu-output_YAaqu68krXBodQ5VbMfUCF-json_data",
+      "src_id": "5nHSgNPjArahNc8urJNpEu",
+      "src_slot": "output",
+      "dst_id": "YAaqu68krXBodQ5VbMfUCF",
+      "dst_slot": "json_data"
+    },
+    {
+      "edgeid": "edge_YAaqu68krXBodQ5VbMfUCF-formatted_WM9o6aZAKACyodfUAMAuRV-value",
+      "src_id": "YAaqu68krXBodQ5VbMfUCF",
+      "src_slot": "formatted",
+      "dst_id": "WM9o6aZAKACyodfUAMAuRV",
+      "dst_slot": "value"
+    },
+    {
+      "edgeid": "edge_5nHSgNPjArahNc8urJNpEu-output_WM9o6aZAKACyodfUAMAuRV-json",
+      "src_id": "5nHSgNPjArahNc8urJNpEu",
+      "src_slot": "output",
+      "dst_id": "WM9o6aZAKACyodfUAMAuRV",
+      "dst_slot": "json"
+    },
+    {
+      "edgeid": "edge_BH5qGjhUpKxaEvhsfrRBP9-connection_9o5ezRLZcu3TMtAoXTVdHT-api_connection",
+      "src_id": "BH5qGjhUpKxaEvhsfrRBP9",
+      "src_slot": "connection",
+      "dst_id": "9o5ezRLZcu3TMtAoXTVdHT",
+      "dst_slot": "api_connection"
+    },
+    {
+      "edgeid": "edge_3sJtqkHCYTWbjMEfmm5Ezk-settings_9o5ezRLZcu3TMtAoXTVdHT-settings",
+      "src_id": "3sJtqkHCYTWbjMEfmm5Ezk",
+      "src_slot": "settings",
+      "dst_id": "9o5ezRLZcu3TMtAoXTVdHT",
+      "dst_slot": "settings"
+    },
+    {
+      "edgeid": "edge_8DJemArFbLEKi3iFMgs85G-message_count_4i8jSVKmyp6w7YptJNVk8o-A",
+      "src_id": "8DJemArFbLEKi3iFMgs85G",
+      "src_slot": "message_count",
+      "dst_id": "4i8jSVKmyp6w7YptJNVk8o",
+      "dst_slot": "A"
+    },
+    {
+      "edgeid": "edge_NyjwUhVtMvWwcg9R67uQHS-value_4i8jSVKmyp6w7YptJNVk8o-B",
+      "src_id": "NyjwUhVtMvWwcg9R67uQHS",
+      "src_slot": "value",
+      "dst_id": "4i8jSVKmyp6w7YptJNVk8o",
+      "dst_slot": "B"
+    },
+    {
+      "edgeid": "edge_4i8jSVKmyp6w7YptJNVk8o-result_5pGZ2aTq7moyQcGk4G7AHD-condition",
+      "src_id": "4i8jSVKmyp6w7YptJNVk8o",
+      "src_slot": "result",
+      "dst_id": "5pGZ2aTq7moyQcGk4G7AHD",
+      "dst_slot": "condition"
+    },
+    {
+      "edgeid": "edge_XkEQeMFSGzGdz3yQ6rxviJ-pressed_QCm8YfC3yNPJJfNjMLaN4P-in3",
+      "src_id": "XkEQeMFSGzGdz3yQ6rxviJ",
+      "src_slot": "pressed",
+      "dst_id": "QCm8YfC3yNPJJfNjMLaN4P",
+      "dst_slot": "in3"
+    },
+    {
+      "edgeid": "edge_WM9o6aZAKACyodfUAMAuRV-output_nQxRWbFroWj7bXXYqXKs7w-json",
+      "src_id": "WM9o6aZAKACyodfUAMAuRV",
+      "src_slot": "output",
+      "dst_id": "nQxRWbFroWj7bXXYqXKs7w",
+      "dst_slot": "json"
+    },
+    {
+      "edgeid": "edge_nQxRWbFroWj7bXXYqXKs7w-value_TNLukEECPffw3mveKVDouX-text",
+      "src_id": "nQxRWbFroWj7bXXYqXKs7w",
+      "src_slot": "value",
+      "dst_id": "TNLukEECPffw3mveKVDouX",
+      "dst_slot": "text"
+    },
+    {
+      "edgeid": "edge_TNLukEECPffw3mveKVDouX-pull_message_QVitetXUEEsbzm8T4gv375-data",
+      "src_id": "TNLukEECPffw3mveKVDouX",
+      "src_slot": "pull_message",
+      "dst_id": "QVitetXUEEsbzm8T4gv375",
+      "dst_slot": "data"
+    },
+    {
+      "edgeid": "edge_5pGZ2aTq7moyQcGk4G7AHD-true_QVitetXUEEsbzm8T4gv375-action",
+      "src_id": "5pGZ2aTq7moyQcGk4G7AHD",
+      "src_slot": "true",
+      "dst_id": "QVitetXUEEsbzm8T4gv375",
+      "dst_slot": "action"
+    },
+    {
+      "edgeid": "edge_QCm8YfC3yNPJJfNjMLaN4P-out_8DJemArFbLEKi3iFMgs85G-clear_database",
+      "src_id": "QCm8YfC3yNPJJfNjMLaN4P",
+      "src_slot": "out",
+      "dst_id": "8DJemArFbLEKi3iFMgs85G",
+      "dst_slot": "clear_database"
+    },
+    {
+      "edgeid": "edge_8DJemArFbLEKi3iFMgs85G-on_update_2SgiGHDLRKXjcGoxwn9mi5-update",
+      "src_id": "8DJemArFbLEKi3iFMgs85G",
+      "src_slot": "on_update",
+      "dst_id": "2SgiGHDLRKXjcGoxwn9mi5",
+      "dst_slot": "update"
+    },
+    {
+      "edgeid": "edge_8DJemArFbLEKi3iFMgs85G-messages_2SgiGHDLRKXjcGoxwn9mi5-messages",
+      "src_id": "8DJemArFbLEKi3iFMgs85G",
+      "src_slot": "messages",
+      "dst_id": "2SgiGHDLRKXjcGoxwn9mi5",
+      "dst_slot": "messages"
+    },
+    {
+      "edgeid": "edge_QVitetXUEEsbzm8T4gv375-action_param_NBhDqHvLEuadJJKDmsPYiH-in1",
+      "src_id": "QVitetXUEEsbzm8T4gv375",
+      "src_slot": "action_param",
+      "dst_id": "NBhDqHvLEuadJJKDmsPYiH",
+      "dst_slot": "in1"
+    },
+    {
+      "edgeid": "edge_NBhDqHvLEuadJJKDmsPYiH-out_8DJemArFbLEKi3iFMgs85G-add_message",
+      "src_id": "NBhDqHvLEuadJJKDmsPYiH",
+      "src_slot": "out",
+      "dst_id": "8DJemArFbLEKi3iFMgs85G",
+      "dst_slot": "add_message"
+    },
+    {
+      "edgeid": "edge_nfANomboX9pUN9mtTqNGWW-value_XAnFsCVmuGKqkFYrsNjJqG-text",
+      "src_id": "nfANomboX9pUN9mtTqNGWW",
+      "src_slot": "value",
+      "dst_id": "XAnFsCVmuGKqkFYrsNjJqG",
+      "dst_slot": "text"
+    },
+    {
+      "edgeid": "edge_WM9o6aZAKACyodfUAMAuRV-output_nfANomboX9pUN9mtTqNGWW-json",
+      "src_id": "WM9o6aZAKACyodfUAMAuRV",
+      "src_slot": "output",
+      "dst_id": "nfANomboX9pUN9mtTqNGWW",
+      "dst_slot": "json"
+    },
+    {
+      "edgeid": "edge_WdguGxusK27N7snfoGMogk-out1_NBhDqHvLEuadJJKDmsPYiH-in2",
+      "src_id": "WdguGxusK27N7snfoGMogk",
+      "src_slot": "out1",
+      "dst_id": "NBhDqHvLEuadJJKDmsPYiH",
+      "dst_slot": "in2"
+    },
+    {
+      "edgeid": "edge_3dqRpy3xUaWQwedMyDpL7h-submit_WdguGxusK27N7snfoGMogk-action",
+      "src_id": "3dqRpy3xUaWQwedMyDpL7h",
+      "src_slot": "submit",
+      "dst_id": "WdguGxusK27N7snfoGMogk",
+      "dst_slot": "action"
+    },
+    {
+      "edgeid": "edge_WdguGxusK27N7snfoGMogk-out2_9o5ezRLZcu3TMtAoXTVdHT-activate",
+      "src_id": "WdguGxusK27N7snfoGMogk",
+      "src_slot": "out2",
+      "dst_id": "9o5ezRLZcu3TMtAoXTVdHT",
+      "dst_slot": "activate"
+    },
+    {
+      "edgeid": "edge_9o5ezRLZcu3TMtAoXTVdHT-done_NBhDqHvLEuadJJKDmsPYiH-in3",
+      "src_id": "9o5ezRLZcu3TMtAoXTVdHT",
+      "src_slot": "done",
+      "dst_id": "NBhDqHvLEuadJJKDmsPYiH",
+      "dst_slot": "in3"
+    },
+    {
+      "edgeid": "edge_XAnFsCVmuGKqkFYrsNjJqG-pull_message_hbagjmgKMA8MdjSuZMyb4f-input",
+      "src_id": "XAnFsCVmuGKqkFYrsNjJqG",
+      "src_slot": "pull_message",
+      "dst_id": "hbagjmgKMA8MdjSuZMyb4f",
+      "dst_slot": "input"
+    },
+    {
+      "edgeid": "edge_hbagjmgKMA8MdjSuZMyb4f-output_Qur7QnzPJ9bhft9xNAgMFe-array1",
+      "src_id": "hbagjmgKMA8MdjSuZMyb4f",
+      "src_slot": "output",
+      "dst_id": "Qur7QnzPJ9bhft9xNAgMFe",
+      "dst_slot": "array1"
+    },
+    {
+      "edgeid": "edge_8DJemArFbLEKi3iFMgs85G-messages_Qur7QnzPJ9bhft9xNAgMFe-array2",
+      "src_id": "8DJemArFbLEKi3iFMgs85G",
+      "src_slot": "messages",
+      "dst_id": "Qur7QnzPJ9bhft9xNAgMFe",
+      "dst_slot": "array2"
+    },
+    {
+      "edgeid": "edge_Qur7QnzPJ9bhft9xNAgMFe-merged_9o5ezRLZcu3TMtAoXTVdHT-messages",
+      "src_id": "Qur7QnzPJ9bhft9xNAgMFe",
+      "src_slot": "merged",
+      "dst_id": "9o5ezRLZcu3TMtAoXTVdHT",
+      "dst_slot": "messages"
+    },
+    {
+      "edgeid": "edge_8DJemArFbLEKi3iFMgs85G-on_update_5pGZ2aTq7moyQcGk4G7AHD-action",
+      "src_id": "8DJemArFbLEKi3iFMgs85G",
+      "src_slot": "on_update",
+      "dst_id": "5pGZ2aTq7moyQcGk4G7AHD",
+      "dst_slot": "action"
+    },
+    {
+      "edgeid": "edge_PxQvAMnjdKeKw4a53SN6mo-character_data_X3kQ2qJi6hKXfcPDBivukN-json",
+      "src_id": "PxQvAMnjdKeKw4a53SN6mo",
+      "src_slot": "character_data",
+      "dst_id": "X3kQ2qJi6hKXfcPDBivukN",
+      "dst_slot": "json"
+    },
+    {
+      "edgeid": "edge_PxQvAMnjdKeKw4a53SN6mo-character_data_aCt5vemKCRMPM3sGGiBhez-json",
+      "src_id": "PxQvAMnjdKeKw4a53SN6mo",
+      "src_slot": "character_data",
+      "dst_id": "aCt5vemKCRMPM3sGGiBhez",
+      "dst_slot": "json"
+    },
+    {
+      "edgeid": "edge_PxQvAMnjdKeKw4a53SN6mo-on_load_QCm8YfC3yNPJJfNjMLaN4P-in1",
+      "src_id": "PxQvAMnjdKeKw4a53SN6mo",
+      "src_slot": "on_load",
+      "dst_id": "QCm8YfC3yNPJJfNjMLaN4P",
+      "dst_slot": "in1"
+    }
+  ]
+}

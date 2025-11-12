@@ -1,0 +1,1657 @@
+{
+  "nodes": [
+    {
+      "id": "3H4SNsLvZfr2qVDVt2DGvk",
+      "nodetype": "DictNode",
+      "input_slots": [
+        {
+          "id": "clear",
+          "datatype": "action"
+        },
+        {
+          "id": "set",
+          "datatype": "action_param"
+        },
+        {
+          "id": "remove",
+          "datatype": "action_param"
+        },
+        {
+          "id": "insert",
+          "datatype": "action"
+        },
+        {
+          "id": "key",
+          "datatype": "any"
+        },
+        {
+          "id": "value",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "on_update",
+          "datatype": "action"
+        },
+        {
+          "id": "dict",
+          "datatype": "any"
+        },
+        {
+          "id": "count",
+          "datatype": "int"
+        }
+      ],
+      "pos": {
+        "x": 506.8785821966238,
+        "y": -677.7536928709649
+      },
+      "size": {
+        "width": 280,
+        "height": 275
+      },
+      "label": "Dictionary",
+      "data": {
+        "dict": {},
+        "count": 0
+      }
+    },
+    {
+      "id": "3RDunf9jjpS5aMBD5UEJeU",
+      "nodetype": "DictNode",
+      "input_slots": [
+        {
+          "id": "clear",
+          "datatype": "action"
+        },
+        {
+          "id": "set",
+          "datatype": "action_param"
+        },
+        {
+          "id": "remove",
+          "datatype": "action_param"
+        },
+        {
+          "id": "insert",
+          "datatype": "action"
+        },
+        {
+          "id": "key",
+          "datatype": "any"
+        },
+        {
+          "id": "value",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "on_update",
+          "datatype": "action"
+        },
+        {
+          "id": "dict",
+          "datatype": "any"
+        },
+        {
+          "id": "count",
+          "datatype": "int"
+        }
+      ],
+      "pos": {
+        "x": -301.59616859483594,
+        "y": -693.7828277521853
+      },
+      "size": {
+        "width": 280,
+        "height": 275
+      },
+      "label": "Dictionary",
+      "data": {
+        "dict": {},
+        "count": 0
+      }
+    },
+    {
+      "id": "XSyrU8s97beWGq4AuTz6gp",
+      "nodetype": "GetArrayElementNode",
+      "input_slots": [
+        {
+          "id": "array",
+          "datatype": "any"
+        },
+        {
+          "id": "index",
+          "datatype": "int"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "element",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": -670.1006650340443,
+        "y": -468.5158665631735
+      },
+      "size": {
+        "width": 149,
+        "height": 123
+      },
+      "label": "Get Array Element",
+      "data": {
+        "index": 0
+      }
+    },
+    {
+      "id": "K6aqmtJbAN2iN64EAAgoJs",
+      "nodetype": "StringNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": -1271.8551406370543,
+        "y": -611.5995038009845
+      },
+      "size": {
+        "width": 178,
+        "height": 88
+      },
+      "label": "String",
+      "data": {
+        "value": "Hello!"
+      }
+    },
+    {
+      "id": "f84SW6C6JKwoBRTbY5MHzo",
+      "nodetype": "StringNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": -1272.7824577887618,
+        "y": -508.32169508842924
+      },
+      "size": {
+        "width": 178,
+        "height": 88
+      },
+      "label": "String",
+      "data": {
+        "value": "How"
+      }
+    },
+    {
+      "id": "STwCyWTjEc6e8esoLmgbmX",
+      "nodetype": "StringNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": -1276.0602665013166,
+        "y": -394.85842294553265
+      },
+      "size": {
+        "width": 178,
+        "height": 88
+      },
+      "label": "String",
+      "data": {
+        "value": "Are"
+      }
+    },
+    {
+      "id": "bbMMp4AkXG8yDQY2j5uZQt",
+      "nodetype": "StringNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": -1272.9262777535196,
+        "y": -285.16881677262506
+      },
+      "size": {
+        "width": 178,
+        "height": 88
+      },
+      "label": "String",
+      "data": {
+        "value": "You?"
+      }
+    },
+    {
+      "id": "MmabBhd2uQG2hjxhZg8jV9",
+      "nodetype": "AppendArrayNode",
+      "input_slots": [
+        {
+          "id": "array",
+          "datatype": "any"
+        },
+        {
+          "id": "item",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": -1039.4368348503572,
+        "y": -610.5273149616131
+      },
+      "size": {
+        "width": 130,
+        "height": 89
+      },
+      "label": "Append Array",
+      "data": {}
+    },
+    {
+      "id": "m6TY2QGGxSESCq5p6FwTe6",
+      "nodetype": "AppendArrayNode",
+      "input_slots": [
+        {
+          "id": "array",
+          "datatype": "any"
+        },
+        {
+          "id": "item",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": -1037.6688925266449,
+        "y": -505.9249855167592
+      },
+      "size": {
+        "width": 130,
+        "height": 89
+      },
+      "label": "Append Array",
+      "data": {}
+    },
+    {
+      "id": "WhYZsvhLLWWp8hGNpQWvsL",
+      "nodetype": "AppendArrayNode",
+      "input_slots": [
+        {
+          "id": "array",
+          "datatype": "any"
+        },
+        {
+          "id": "item",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": -1034.9387760544018,
+        "y": -394.9002489788894
+      },
+      "size": {
+        "width": 130,
+        "height": 89
+      },
+      "label": "Append Array",
+      "data": {}
+    },
+    {
+      "id": "LsqffKdiHVSrryRP3Ctk2J",
+      "nodetype": "AppendArrayNode",
+      "input_slots": [
+        {
+          "id": "array",
+          "datatype": "any"
+        },
+        {
+          "id": "item",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": -1036.7588537025636,
+        "y": -284.78555126510093
+      },
+      "size": {
+        "width": 130,
+        "height": 89
+      },
+      "label": "Append Array",
+      "data": {}
+    },
+    {
+      "id": "df4ifepYPfwjZkKiu4bjMC",
+      "nodetype": "ForLoopNode",
+      "input_slots": [
+        {
+          "id": "activate",
+          "datatype": "action"
+        },
+        {
+          "id": "loops",
+          "datatype": "int"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "act",
+          "datatype": "action"
+        },
+        {
+          "id": "index",
+          "datatype": "int"
+        }
+      ],
+      "pos": {
+        "x": -800.2906411774999,
+        "y": -611.7042823073311
+      },
+      "size": {
+        "width": 222,
+        "height": 134
+      },
+      "label": "For Loop",
+      "data": {
+        "loops": 4,
+        "_current_index": 3
+      }
+    },
+    {
+      "id": "TamPynVaNdf2AsrUVy7hLw",
+      "nodetype": "ButtonNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "pressed",
+          "datatype": "action"
+        }
+      ],
+      "pos": {
+        "x": -1060.5626176006194,
+        "y": -722.8451901092294
+      },
+      "size": {
+        "width": 149,
+        "height": 91
+      },
+      "label": "Button Node",
+      "data": {
+        "button_label": "Press!"
+      }
+    },
+    {
+      "id": "RFn387XM9PxHDdpAiRTDS2",
+      "nodetype": "ButtonNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "pressed",
+          "datatype": "action"
+        }
+      ],
+      "pos": {
+        "x": -833.9629504044757,
+        "y": -988.5765267408517
+      },
+      "size": {
+        "width": 149,
+        "height": 91
+      },
+      "label": "Button Node",
+      "data": {
+        "button_label": "Press!"
+      }
+    },
+    {
+      "id": "nrLdAQAHyPpcQqDNPu7Eaj",
+      "nodetype": "IntNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "int"
+        }
+      ],
+      "pos": {
+        "x": -823.042484515505,
+        "y": -889.3822949160337
+      },
+      "size": {
+        "width": 138,
+        "height": 88
+      },
+      "label": "Int",
+      "data": {
+        "value": 3
+      }
+    },
+    {
+      "id": "badbaEzVXwGbsPDwGE2Rdf",
+      "nodetype": "PullNode",
+      "input_slots": [
+        {
+          "id": "activate",
+          "datatype": "action_param"
+        },
+        {
+          "id": "in",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "out",
+          "datatype": "action_param"
+        }
+      ],
+      "pos": {
+        "x": -636.4845255789206,
+        "y": -939.4344302404834
+      },
+      "size": {
+        "width": 116,
+        "height": 89
+      },
+      "label": "Pull",
+      "data": {}
+    },
+    {
+      "id": "TQu8JUsmEYf4TPv3E98SmM",
+      "nodetype": "ButtonNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "pressed",
+          "datatype": "action"
+        }
+      ],
+      "pos": {
+        "x": -818.456164926312,
+        "y": -1136.0187482126241
+      },
+      "size": {
+        "width": 149,
+        "height": 91
+      },
+      "label": "Button Node",
+      "data": {
+        "button_label": "Press!"
+      }
+    },
+    {
+      "id": "XwBBLMfHDGdjZPqkex3Mqr",
+      "nodetype": "ButtonNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "pressed",
+          "datatype": "action"
+        }
+      ],
+      "pos": {
+        "x": 196.88124567144263,
+        "y": -965.3634881484306
+      },
+      "size": {
+        "width": 149,
+        "height": 91
+      },
+      "label": "Button Node",
+      "data": {
+        "button_label": "Press!"
+      }
+    },
+    {
+      "id": "ArxajXVD6k2CgZ2v49KRAp",
+      "nodetype": "PullNode",
+      "input_slots": [
+        {
+          "id": "activate",
+          "datatype": "action_param"
+        },
+        {
+          "id": "in",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "out",
+          "datatype": "action_param"
+        }
+      ],
+      "pos": {
+        "x": 361.39782731606067,
+        "y": -825.4016201821139
+      },
+      "size": {
+        "width": 116,
+        "height": 89
+      },
+      "label": "Pull",
+      "data": {}
+    },
+    {
+      "id": "2kR5jmxY8Me3UGDXBKn3S5",
+      "nodetype": "ConsoleNode",
+      "input_slots": [
+        {
+          "id": "trigger",
+          "datatype": "action_param"
+        },
+        {
+          "id": "input",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [],
+      "pos": {
+        "x": 38.37834582169148,
+        "y": -694.7502423762492
+      },
+      "size": {
+        "width": 106,
+        "height": 89
+      },
+      "label": "Console",
+      "data": {}
+    },
+    {
+      "id": "XBBDLvpv9UiPZfinxewtfa",
+      "nodetype": "ConsoleNode",
+      "input_slots": [
+        {
+          "id": "trigger",
+          "datatype": "action_param"
+        },
+        {
+          "id": "input",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [],
+      "pos": {
+        "x": 849.4313350258851,
+        "y": -676.4607835930905
+      },
+      "size": {
+        "width": 106,
+        "height": 89
+      },
+      "label": "Console",
+      "data": {}
+    },
+    {
+      "id": "4KTNx6DSfMqCokaAkXPdsJ",
+      "nodetype": "AppendArrayNode",
+      "input_slots": [
+        {
+          "id": "array",
+          "datatype": "any"
+        },
+        {
+          "id": "item",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": -1045.2107932051367,
+        "y": 585.3519779692142
+      },
+      "size": {
+        "width": 130,
+        "height": 89
+      },
+      "label": "Append Array",
+      "data": {}
+    },
+    {
+      "id": "fngSraNS2dWiCeL73tFYYf",
+      "nodetype": "AppendArrayNode",
+      "input_slots": [
+        {
+          "id": "array",
+          "datatype": "any"
+        },
+        {
+          "id": "item",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": -1042.4806767328942,
+        "y": 696.376714507084
+      },
+      "size": {
+        "width": 130,
+        "height": 89
+      },
+      "label": "Append Array",
+      "data": {}
+    },
+    {
+      "id": "oRjXueFAa5G4qnX4xt298o",
+      "nodetype": "AppendArrayNode",
+      "input_slots": [
+        {
+          "id": "array",
+          "datatype": "any"
+        },
+        {
+          "id": "item",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": -1044.3007543810559,
+        "y": 806.4914122208725
+      },
+      "size": {
+        "width": 130,
+        "height": 89
+      },
+      "label": "Append Array",
+      "data": {}
+    },
+    {
+      "id": "gPoEWr4NwjnHBdW8D7X6o9",
+      "nodetype": "JSONNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "json"
+        }
+      ],
+      "pos": {
+        "x": -1571.4825418703838,
+        "y": 122.58872475994156
+      },
+      "size": {
+        "width": 321,
+        "height": 218
+      },
+      "label": "JSON",
+      "data": {
+        "value": "{\n\"tag\": \"something\",\n\"content\": \"Hello\"\n}"
+      }
+    },
+    {
+      "id": "K6dbe92in6u5VyhppqDGkv",
+      "nodetype": "AppendArrayNode",
+      "input_slots": [
+        {
+          "id": "array",
+          "datatype": "any"
+        },
+        {
+          "id": "item",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": -1045.482433469455,
+        "y": 924.1854020332959
+      },
+      "size": {
+        "width": 130,
+        "height": 89
+      },
+      "label": "Append Array",
+      "data": {}
+    },
+    {
+      "id": "KGgUWtDggyTDNgWoR2zJoA",
+      "nodetype": "AppendArrayNode",
+      "input_slots": [
+        {
+          "id": "array",
+          "datatype": "any"
+        },
+        {
+          "id": "item",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": -1042.7523169972123,
+        "y": 1035.2101385711658
+      },
+      "size": {
+        "width": 130,
+        "height": 89
+      },
+      "label": "Append Array",
+      "data": {}
+    },
+    {
+      "id": "PNYXLBRWUwzZDJRdrTSESo",
+      "nodetype": "AppendArrayNode",
+      "input_slots": [
+        {
+          "id": "array",
+          "datatype": "any"
+        },
+        {
+          "id": "item",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": -1044.572394645374,
+        "y": 1145.324836284954
+      },
+      "size": {
+        "width": 130,
+        "height": 89
+      },
+      "label": "Append Array",
+      "data": {}
+    },
+    {
+      "id": "o8tehvqVoeWDMShcEydPNc",
+      "nodetype": "JSONNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "json"
+        }
+      ],
+      "pos": {
+        "x": -1580.347859675885,
+        "y": 1314.510829247306
+      },
+      "size": {
+        "width": 321,
+        "height": 218
+      },
+      "label": "JSON",
+      "data": {
+        "value": "{\n\"tag\": \"anything\",\n\"content\": \"Demo\"\n}"
+      }
+    },
+    {
+      "id": "VGULHXiWhfXjiSfR6odQc5",
+      "nodetype": "JSONNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "json"
+        }
+      ],
+      "pos": {
+        "x": -1572.6682119576892,
+        "y": 350.8245402425236
+      },
+      "size": {
+        "width": 321,
+        "height": 218
+      },
+      "label": "JSON",
+      "data": {
+        "value": "{\n\"tag\": \"anything\",\n\"content\": \"Howdy\"\n}"
+      }
+    },
+    {
+      "id": "c6YrosUUdKjJvx7WJYcDji",
+      "nodetype": "JSONNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "json"
+        }
+      ],
+      "pos": {
+        "x": -1572.0258223990197,
+        "y": 581.8024451940685
+      },
+      "size": {
+        "width": 321,
+        "height": 218
+      },
+      "label": "JSON",
+      "data": {
+        "value": "{\n\"tag\": \"anything\",\n\"content\": \"Yup\"\n}"
+      }
+    },
+    {
+      "id": "ZzmgRuFN5BmnRgQbEvt3Cq",
+      "nodetype": "JSONNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "json"
+        }
+      ],
+      "pos": {
+        "x": -1572.02582239902,
+        "y": 817.6221395248695
+      },
+      "size": {
+        "width": 321,
+        "height": 218
+      },
+      "label": "JSON",
+      "data": {
+        "value": "{\n\"tag\": \"something\",\n\"content\": \"Works\"\n}"
+      }
+    },
+    {
+      "id": "WWw47qhrp4WoMEedqLrGLp",
+      "nodetype": "ButtonNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "pressed",
+          "datatype": "action"
+        }
+      ],
+      "pos": {
+        "x": -1100.0865320749033,
+        "y": 261.4528637703992
+      },
+      "size": {
+        "width": 149,
+        "height": 91
+      },
+      "label": "Button Node",
+      "data": {
+        "button_label": "Press!"
+      }
+    },
+    {
+      "id": "YUpzxWLZvH4vrhMWkwGPrr",
+      "nodetype": "ForEachNode",
+      "input_slots": [
+        {
+          "id": "activate",
+          "datatype": "action_param"
+        },
+        {
+          "id": "array",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "act",
+          "datatype": "action_param"
+        },
+        {
+          "id": "element",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": -736.8156313715125,
+        "y": 765.7810823001066
+      },
+      "size": {
+        "width": 149,
+        "height": 89
+      },
+      "label": "For Each",
+      "data": {
+        "_current_element": {
+          "tag": "anything",
+          "content": "Demo"
+        }
+      }
+    },
+    {
+      "id": "ZPAHAddPb47hwB85nUeexr",
+      "nodetype": "DictNode",
+      "input_slots": [
+        {
+          "id": "clear",
+          "datatype": "action"
+        },
+        {
+          "id": "set",
+          "datatype": "action_param"
+        },
+        {
+          "id": "remove",
+          "datatype": "action_param"
+        },
+        {
+          "id": "insert",
+          "datatype": "action"
+        },
+        {
+          "id": "key",
+          "datatype": "any"
+        },
+        {
+          "id": "value",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "on_update",
+          "datatype": "action"
+        },
+        {
+          "id": "dict",
+          "datatype": "any"
+        },
+        {
+          "id": "count",
+          "datatype": "int"
+        }
+      ],
+      "pos": {
+        "x": -439.9171515157435,
+        "y": 709.1011644262477
+      },
+      "size": {
+        "width": 280,
+        "height": 275
+      },
+      "label": "Dictionary",
+      "data": {
+        "dict": {},
+        "count": 0
+      }
+    },
+    {
+      "id": "4P2eM6wsgmTd9iRKA8Q9A4",
+      "nodetype": "ConsoleNode",
+      "input_slots": [
+        {
+          "id": "trigger",
+          "datatype": "action_param"
+        },
+        {
+          "id": "input",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [],
+      "pos": {
+        "x": -109.54974664740767,
+        "y": 458.1425797393491
+      },
+      "size": {
+        "width": 106,
+        "height": 89
+      },
+      "label": "Console",
+      "data": {}
+    },
+    {
+      "id": "6BqHgiyvpPQZvyikTmsHrv",
+      "nodetype": "JSONSearchNode",
+      "input_slots": [
+        {
+          "id": "activate",
+          "datatype": "action_param"
+        },
+        {
+          "id": "dict",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "found",
+          "datatype": "action"
+        },
+        {
+          "id": "keys",
+          "datatype": "any"
+        },
+        {
+          "id": "values",
+          "datatype": "any"
+        },
+        {
+          "id": "count",
+          "datatype": "int"
+        }
+      ],
+      "pos": {
+        "x": 301.40811387954375,
+        "y": 519.2584388651284
+      },
+      "size": {
+        "width": 280,
+        "height": 250
+      },
+      "label": "JSON Search",
+      "data": {
+        "search_key": "tag",
+        "search_value": "something",
+        "_found_keys": [
+          "ksnDdYJG",
+          "5pQN6yjn"
+        ],
+        "_found_values": [
+          {
+            "tag": "something",
+            "content": "Hello"
+          },
+          {
+            "tag": "something",
+            "content": "Works"
+          }
+        ],
+        "_found_count": 2
+      }
+    },
+    {
+      "id": "fmmh8chBPcPQCFpdHgNeJg",
+      "nodetype": "ConsoleNode",
+      "input_slots": [
+        {
+          "id": "trigger",
+          "datatype": "action_param"
+        },
+        {
+          "id": "input",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [],
+      "pos": {
+        "x": 724.8060388321543,
+        "y": 524.1282630480912
+      },
+      "size": {
+        "width": 106,
+        "height": 89
+      },
+      "label": "Console",
+      "data": {}
+    },
+    {
+      "id": "cEmtqfCh2iDKKvc6x4nHAg",
+      "nodetype": "ButtonNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "pressed",
+          "datatype": "action"
+        }
+      ],
+      "pos": {
+        "x": 119.17224259779087,
+        "y": 520.9135772386019
+      },
+      "size": {
+        "width": 149,
+        "height": 91
+      },
+      "label": "Button Node",
+      "data": {
+        "button_label": "Press!"
+      }
+    },
+    {
+      "id": "UHPquAj2YVw4W6FepNnz57",
+      "nodetype": "JSONSearchNode",
+      "input_slots": [
+        {
+          "id": "activate",
+          "datatype": "action_param"
+        },
+        {
+          "id": "dict",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "found",
+          "datatype": "action"
+        },
+        {
+          "id": "keys",
+          "datatype": "any"
+        },
+        {
+          "id": "values",
+          "datatype": "any"
+        },
+        {
+          "id": "count",
+          "datatype": "int"
+        }
+      ],
+      "pos": {
+        "x": 308.94196905391897,
+        "y": 824.055307818877
+      },
+      "size": {
+        "width": 280,
+        "height": 250
+      },
+      "label": "JSON Search",
+      "data": {
+        "search_key": "tag",
+        "search_value": "anything",
+        "_found_keys": [
+          "KHDQiVGB",
+          "SBfCkDps",
+          "3zpbonVA",
+          "XKVcoE4i"
+        ],
+        "_found_values": [
+          {
+            "tag": "anything",
+            "content": "Howdy"
+          },
+          {
+            "tag": "anything",
+            "content": "Yup"
+          },
+          {
+            "tag": "anything",
+            "content": "World"
+          },
+          {
+            "tag": "anything",
+            "content": "Demo"
+          }
+        ],
+        "_found_count": 4
+      }
+    },
+    {
+      "id": "LuakQ82w4n4Wxks6rM9mt6",
+      "nodetype": "ConsoleNode",
+      "input_slots": [
+        {
+          "id": "trigger",
+          "datatype": "action_param"
+        },
+        {
+          "id": "input",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [],
+      "pos": {
+        "x": 732.3398940065294,
+        "y": 828.9251320018399
+      },
+      "size": {
+        "width": 106,
+        "height": 89
+      },
+      "label": "Console",
+      "data": {}
+    },
+    {
+      "id": "GfLMStjhNW7X3Ex8Cgfqt9",
+      "nodetype": "ButtonNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "pressed",
+          "datatype": "action"
+        }
+      ],
+      "pos": {
+        "x": 130.6407639432597,
+        "y": 824.9235129581318
+      },
+      "size": {
+        "width": 149,
+        "height": 91
+      },
+      "label": "Button Node",
+      "data": {
+        "button_label": "Press!"
+      }
+    },
+    {
+      "id": "DYRJRvxq6d9SePYYLoBBDd",
+      "nodetype": "JSONNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "json"
+        }
+      ],
+      "pos": {
+        "x": -1576.1808065621947,
+        "y": 1066.5966744862933
+      },
+      "size": {
+        "width": 321,
+        "height": 218
+      },
+      "label": "JSON",
+      "data": {
+        "value": "{\n\"tag\": \"anything\",\n\"content\": \"World\"\n}"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edgeid": "edge_K6aqmtJbAN2iN64EAAgoJs-value_MmabBhd2uQG2hjxhZg8jV9-item",
+      "src_id": "K6aqmtJbAN2iN64EAAgoJs",
+      "src_slot": "value",
+      "dst_id": "MmabBhd2uQG2hjxhZg8jV9",
+      "dst_slot": "item"
+    },
+    {
+      "edgeid": "edge_f84SW6C6JKwoBRTbY5MHzo-value_m6TY2QGGxSESCq5p6FwTe6-item",
+      "src_id": "f84SW6C6JKwoBRTbY5MHzo",
+      "src_slot": "value",
+      "dst_id": "m6TY2QGGxSESCq5p6FwTe6",
+      "dst_slot": "item"
+    },
+    {
+      "edgeid": "edge_STwCyWTjEc6e8esoLmgbmX-value_WhYZsvhLLWWp8hGNpQWvsL-item",
+      "src_id": "STwCyWTjEc6e8esoLmgbmX",
+      "src_slot": "value",
+      "dst_id": "WhYZsvhLLWWp8hGNpQWvsL",
+      "dst_slot": "item"
+    },
+    {
+      "edgeid": "edge_bbMMp4AkXG8yDQY2j5uZQt-value_LsqffKdiHVSrryRP3Ctk2J-item",
+      "src_id": "bbMMp4AkXG8yDQY2j5uZQt",
+      "src_slot": "value",
+      "dst_id": "LsqffKdiHVSrryRP3Ctk2J",
+      "dst_slot": "item"
+    },
+    {
+      "edgeid": "edge_WhYZsvhLLWWp8hGNpQWvsL-output_LsqffKdiHVSrryRP3Ctk2J-array",
+      "src_id": "WhYZsvhLLWWp8hGNpQWvsL",
+      "src_slot": "output",
+      "dst_id": "LsqffKdiHVSrryRP3Ctk2J",
+      "dst_slot": "array"
+    },
+    {
+      "edgeid": "edge_m6TY2QGGxSESCq5p6FwTe6-output_WhYZsvhLLWWp8hGNpQWvsL-array",
+      "src_id": "m6TY2QGGxSESCq5p6FwTe6",
+      "src_slot": "output",
+      "dst_id": "WhYZsvhLLWWp8hGNpQWvsL",
+      "dst_slot": "array"
+    },
+    {
+      "edgeid": "edge_MmabBhd2uQG2hjxhZg8jV9-output_m6TY2QGGxSESCq5p6FwTe6-array",
+      "src_id": "MmabBhd2uQG2hjxhZg8jV9",
+      "src_slot": "output",
+      "dst_id": "m6TY2QGGxSESCq5p6FwTe6",
+      "dst_slot": "array"
+    },
+    {
+      "edgeid": "edge_df4ifepYPfwjZkKiu4bjMC-act_3RDunf9jjpS5aMBD5UEJeU-insert",
+      "src_id": "df4ifepYPfwjZkKiu4bjMC",
+      "src_slot": "act",
+      "dst_id": "3RDunf9jjpS5aMBD5UEJeU",
+      "dst_slot": "insert"
+    },
+    {
+      "edgeid": "edge_df4ifepYPfwjZkKiu4bjMC-index_3RDunf9jjpS5aMBD5UEJeU-key",
+      "src_id": "df4ifepYPfwjZkKiu4bjMC",
+      "src_slot": "index",
+      "dst_id": "3RDunf9jjpS5aMBD5UEJeU",
+      "dst_slot": "key"
+    },
+    {
+      "edgeid": "edge_LsqffKdiHVSrryRP3Ctk2J-output_XSyrU8s97beWGq4AuTz6gp-array",
+      "src_id": "LsqffKdiHVSrryRP3Ctk2J",
+      "src_slot": "output",
+      "dst_id": "XSyrU8s97beWGq4AuTz6gp",
+      "dst_slot": "array"
+    },
+    {
+      "edgeid": "edge_df4ifepYPfwjZkKiu4bjMC-index_XSyrU8s97beWGq4AuTz6gp-index",
+      "src_id": "df4ifepYPfwjZkKiu4bjMC",
+      "src_slot": "index",
+      "dst_id": "XSyrU8s97beWGq4AuTz6gp",
+      "dst_slot": "index"
+    },
+    {
+      "edgeid": "edge_XSyrU8s97beWGq4AuTz6gp-element_3RDunf9jjpS5aMBD5UEJeU-value",
+      "src_id": "XSyrU8s97beWGq4AuTz6gp",
+      "src_slot": "element",
+      "dst_id": "3RDunf9jjpS5aMBD5UEJeU",
+      "dst_slot": "value"
+    },
+    {
+      "edgeid": "edge_TamPynVaNdf2AsrUVy7hLw-pressed_df4ifepYPfwjZkKiu4bjMC-activate",
+      "src_id": "TamPynVaNdf2AsrUVy7hLw",
+      "src_slot": "pressed",
+      "dst_id": "df4ifepYPfwjZkKiu4bjMC",
+      "dst_slot": "activate"
+    },
+    {
+      "edgeid": "edge_RFn387XM9PxHDdpAiRTDS2-pressed_badbaEzVXwGbsPDwGE2Rdf-activate",
+      "src_id": "RFn387XM9PxHDdpAiRTDS2",
+      "src_slot": "pressed",
+      "dst_id": "badbaEzVXwGbsPDwGE2Rdf",
+      "dst_slot": "activate"
+    },
+    {
+      "edgeid": "edge_nrLdAQAHyPpcQqDNPu7Eaj-value_badbaEzVXwGbsPDwGE2Rdf-in",
+      "src_id": "nrLdAQAHyPpcQqDNPu7Eaj",
+      "src_slot": "value",
+      "dst_id": "badbaEzVXwGbsPDwGE2Rdf",
+      "dst_slot": "in"
+    },
+    {
+      "edgeid": "edge_badbaEzVXwGbsPDwGE2Rdf-out_3RDunf9jjpS5aMBD5UEJeU-remove",
+      "src_id": "badbaEzVXwGbsPDwGE2Rdf",
+      "src_slot": "out",
+      "dst_id": "3RDunf9jjpS5aMBD5UEJeU",
+      "dst_slot": "remove"
+    },
+    {
+      "edgeid": "edge_TQu8JUsmEYf4TPv3E98SmM-pressed_3RDunf9jjpS5aMBD5UEJeU-clear",
+      "src_id": "TQu8JUsmEYf4TPv3E98SmM",
+      "src_slot": "pressed",
+      "dst_id": "3RDunf9jjpS5aMBD5UEJeU",
+      "dst_slot": "clear"
+    },
+    {
+      "edgeid": "edge_XwBBLMfHDGdjZPqkex3Mqr-pressed_ArxajXVD6k2CgZ2v49KRAp-activate",
+      "src_id": "XwBBLMfHDGdjZPqkex3Mqr",
+      "src_slot": "pressed",
+      "dst_id": "ArxajXVD6k2CgZ2v49KRAp",
+      "dst_slot": "activate"
+    },
+    {
+      "edgeid": "edge_3RDunf9jjpS5aMBD5UEJeU-dict_ArxajXVD6k2CgZ2v49KRAp-in",
+      "src_id": "3RDunf9jjpS5aMBD5UEJeU",
+      "src_slot": "dict",
+      "dst_id": "ArxajXVD6k2CgZ2v49KRAp",
+      "dst_slot": "in"
+    },
+    {
+      "edgeid": "edge_ArxajXVD6k2CgZ2v49KRAp-out_3H4SNsLvZfr2qVDVt2DGvk-set",
+      "src_id": "ArxajXVD6k2CgZ2v49KRAp",
+      "src_slot": "out",
+      "dst_id": "3H4SNsLvZfr2qVDVt2DGvk",
+      "dst_slot": "set"
+    },
+    {
+      "edgeid": "edge_3RDunf9jjpS5aMBD5UEJeU-on_update_2kR5jmxY8Me3UGDXBKn3S5-trigger",
+      "src_id": "3RDunf9jjpS5aMBD5UEJeU",
+      "src_slot": "on_update",
+      "dst_id": "2kR5jmxY8Me3UGDXBKn3S5",
+      "dst_slot": "trigger"
+    },
+    {
+      "edgeid": "edge_3RDunf9jjpS5aMBD5UEJeU-dict_2kR5jmxY8Me3UGDXBKn3S5-input",
+      "src_id": "3RDunf9jjpS5aMBD5UEJeU",
+      "src_slot": "dict",
+      "dst_id": "2kR5jmxY8Me3UGDXBKn3S5",
+      "dst_slot": "input"
+    },
+    {
+      "edgeid": "edge_3H4SNsLvZfr2qVDVt2DGvk-on_update_XBBDLvpv9UiPZfinxewtfa-trigger",
+      "src_id": "3H4SNsLvZfr2qVDVt2DGvk",
+      "src_slot": "on_update",
+      "dst_id": "XBBDLvpv9UiPZfinxewtfa",
+      "dst_slot": "trigger"
+    },
+    {
+      "edgeid": "edge_3H4SNsLvZfr2qVDVt2DGvk-dict_XBBDLvpv9UiPZfinxewtfa-input",
+      "src_id": "3H4SNsLvZfr2qVDVt2DGvk",
+      "src_slot": "dict",
+      "dst_id": "XBBDLvpv9UiPZfinxewtfa",
+      "dst_slot": "input"
+    },
+    {
+      "edgeid": "edge_fngSraNS2dWiCeL73tFYYf-output_oRjXueFAa5G4qnX4xt298o-array",
+      "src_id": "fngSraNS2dWiCeL73tFYYf",
+      "src_slot": "output",
+      "dst_id": "oRjXueFAa5G4qnX4xt298o",
+      "dst_slot": "array"
+    },
+    {
+      "edgeid": "edge_4KTNx6DSfMqCokaAkXPdsJ-output_fngSraNS2dWiCeL73tFYYf-array",
+      "src_id": "4KTNx6DSfMqCokaAkXPdsJ",
+      "src_slot": "output",
+      "dst_id": "fngSraNS2dWiCeL73tFYYf",
+      "dst_slot": "array"
+    },
+    {
+      "edgeid": "edge_KGgUWtDggyTDNgWoR2zJoA-output_PNYXLBRWUwzZDJRdrTSESo-array",
+      "src_id": "KGgUWtDggyTDNgWoR2zJoA",
+      "src_slot": "output",
+      "dst_id": "PNYXLBRWUwzZDJRdrTSESo",
+      "dst_slot": "array"
+    },
+    {
+      "edgeid": "edge_K6dbe92in6u5VyhppqDGkv-output_KGgUWtDggyTDNgWoR2zJoA-array",
+      "src_id": "K6dbe92in6u5VyhppqDGkv",
+      "src_slot": "output",
+      "dst_id": "KGgUWtDggyTDNgWoR2zJoA",
+      "dst_slot": "array"
+    },
+    {
+      "edgeid": "edge_oRjXueFAa5G4qnX4xt298o-output_K6dbe92in6u5VyhppqDGkv-array",
+      "src_id": "oRjXueFAa5G4qnX4xt298o",
+      "src_slot": "output",
+      "dst_id": "K6dbe92in6u5VyhppqDGkv",
+      "dst_slot": "array"
+    },
+    {
+      "edgeid": "edge_gPoEWr4NwjnHBdW8D7X6o9-value_4KTNx6DSfMqCokaAkXPdsJ-item",
+      "src_id": "gPoEWr4NwjnHBdW8D7X6o9",
+      "src_slot": "value",
+      "dst_id": "4KTNx6DSfMqCokaAkXPdsJ",
+      "dst_slot": "item"
+    },
+    {
+      "edgeid": "edge_VGULHXiWhfXjiSfR6odQc5-value_fngSraNS2dWiCeL73tFYYf-item",
+      "src_id": "VGULHXiWhfXjiSfR6odQc5",
+      "src_slot": "value",
+      "dst_id": "fngSraNS2dWiCeL73tFYYf",
+      "dst_slot": "item"
+    },
+    {
+      "edgeid": "edge_c6YrosUUdKjJvx7WJYcDji-value_oRjXueFAa5G4qnX4xt298o-item",
+      "src_id": "c6YrosUUdKjJvx7WJYcDji",
+      "src_slot": "value",
+      "dst_id": "oRjXueFAa5G4qnX4xt298o",
+      "dst_slot": "item"
+    },
+    {
+      "edgeid": "edge_ZzmgRuFN5BmnRgQbEvt3Cq-value_K6dbe92in6u5VyhppqDGkv-item",
+      "src_id": "ZzmgRuFN5BmnRgQbEvt3Cq",
+      "src_slot": "value",
+      "dst_id": "K6dbe92in6u5VyhppqDGkv",
+      "dst_slot": "item"
+    },
+    {
+      "edgeid": "edge_o8tehvqVoeWDMShcEydPNc-value_PNYXLBRWUwzZDJRdrTSESo-item",
+      "src_id": "o8tehvqVoeWDMShcEydPNc",
+      "src_slot": "value",
+      "dst_id": "PNYXLBRWUwzZDJRdrTSESo",
+      "dst_slot": "item"
+    },
+    {
+      "edgeid": "edge_PNYXLBRWUwzZDJRdrTSESo-output_YUpzxWLZvH4vrhMWkwGPrr-array",
+      "src_id": "PNYXLBRWUwzZDJRdrTSESo",
+      "src_slot": "output",
+      "dst_id": "YUpzxWLZvH4vrhMWkwGPrr",
+      "dst_slot": "array"
+    },
+    {
+      "edgeid": "edge_WWw47qhrp4WoMEedqLrGLp-pressed_YUpzxWLZvH4vrhMWkwGPrr-activate",
+      "src_id": "WWw47qhrp4WoMEedqLrGLp",
+      "src_slot": "pressed",
+      "dst_id": "YUpzxWLZvH4vrhMWkwGPrr",
+      "dst_slot": "activate"
+    },
+    {
+      "edgeid": "edge_YUpzxWLZvH4vrhMWkwGPrr-act_ZPAHAddPb47hwB85nUeexr-insert",
+      "src_id": "YUpzxWLZvH4vrhMWkwGPrr",
+      "src_slot": "act",
+      "dst_id": "ZPAHAddPb47hwB85nUeexr",
+      "dst_slot": "insert"
+    },
+    {
+      "edgeid": "edge_YUpzxWLZvH4vrhMWkwGPrr-element_ZPAHAddPb47hwB85nUeexr-value",
+      "src_id": "YUpzxWLZvH4vrhMWkwGPrr",
+      "src_slot": "element",
+      "dst_id": "ZPAHAddPb47hwB85nUeexr",
+      "dst_slot": "value"
+    },
+    {
+      "edgeid": "edge_ZPAHAddPb47hwB85nUeexr-on_update_4P2eM6wsgmTd9iRKA8Q9A4-trigger",
+      "src_id": "ZPAHAddPb47hwB85nUeexr",
+      "src_slot": "on_update",
+      "dst_id": "4P2eM6wsgmTd9iRKA8Q9A4",
+      "dst_slot": "trigger"
+    },
+    {
+      "edgeid": "edge_ZPAHAddPb47hwB85nUeexr-dict_4P2eM6wsgmTd9iRKA8Q9A4-input",
+      "src_id": "ZPAHAddPb47hwB85nUeexr",
+      "src_slot": "dict",
+      "dst_id": "4P2eM6wsgmTd9iRKA8Q9A4",
+      "dst_slot": "input"
+    },
+    {
+      "edgeid": "edge_6BqHgiyvpPQZvyikTmsHrv-found_fmmh8chBPcPQCFpdHgNeJg-trigger",
+      "src_id": "6BqHgiyvpPQZvyikTmsHrv",
+      "src_slot": "found",
+      "dst_id": "fmmh8chBPcPQCFpdHgNeJg",
+      "dst_slot": "trigger"
+    },
+    {
+      "edgeid": "edge_6BqHgiyvpPQZvyikTmsHrv-values_fmmh8chBPcPQCFpdHgNeJg-input",
+      "src_id": "6BqHgiyvpPQZvyikTmsHrv",
+      "src_slot": "values",
+      "dst_id": "fmmh8chBPcPQCFpdHgNeJg",
+      "dst_slot": "input"
+    },
+    {
+      "edgeid": "edge_UHPquAj2YVw4W6FepNnz57-found_LuakQ82w4n4Wxks6rM9mt6-trigger",
+      "src_id": "UHPquAj2YVw4W6FepNnz57",
+      "src_slot": "found",
+      "dst_id": "LuakQ82w4n4Wxks6rM9mt6",
+      "dst_slot": "trigger"
+    },
+    {
+      "edgeid": "edge_UHPquAj2YVw4W6FepNnz57-values_LuakQ82w4n4Wxks6rM9mt6-input",
+      "src_id": "UHPquAj2YVw4W6FepNnz57",
+      "src_slot": "values",
+      "dst_id": "LuakQ82w4n4Wxks6rM9mt6",
+      "dst_slot": "input"
+    },
+    {
+      "edgeid": "edge_GfLMStjhNW7X3Ex8Cgfqt9-pressed_UHPquAj2YVw4W6FepNnz57-activate",
+      "src_id": "GfLMStjhNW7X3Ex8Cgfqt9",
+      "src_slot": "pressed",
+      "dst_id": "UHPquAj2YVw4W6FepNnz57",
+      "dst_slot": "activate"
+    },
+    {
+      "edgeid": "edge_cEmtqfCh2iDKKvc6x4nHAg-pressed_6BqHgiyvpPQZvyikTmsHrv-activate",
+      "src_id": "cEmtqfCh2iDKKvc6x4nHAg",
+      "src_slot": "pressed",
+      "dst_id": "6BqHgiyvpPQZvyikTmsHrv",
+      "dst_slot": "activate"
+    },
+    {
+      "edgeid": "edge_ZPAHAddPb47hwB85nUeexr-dict_6BqHgiyvpPQZvyikTmsHrv-dict",
+      "src_id": "ZPAHAddPb47hwB85nUeexr",
+      "src_slot": "dict",
+      "dst_id": "6BqHgiyvpPQZvyikTmsHrv",
+      "dst_slot": "dict"
+    },
+    {
+      "edgeid": "edge_ZPAHAddPb47hwB85nUeexr-dict_UHPquAj2YVw4W6FepNnz57-dict",
+      "src_id": "ZPAHAddPb47hwB85nUeexr",
+      "src_slot": "dict",
+      "dst_id": "UHPquAj2YVw4W6FepNnz57",
+      "dst_slot": "dict"
+    },
+    {
+      "edgeid": "edge_DYRJRvxq6d9SePYYLoBBDd-value_KGgUWtDggyTDNgWoR2zJoA-item",
+      "src_id": "DYRJRvxq6d9SePYYLoBBDd",
+      "src_slot": "value",
+      "dst_id": "KGgUWtDggyTDNgWoR2zJoA",
+      "dst_slot": "item"
+    }
+  ]
+}

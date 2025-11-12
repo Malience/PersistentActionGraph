@@ -1,0 +1,194 @@
+{
+  "nodes": [
+    {
+      "id": "bZYqSZb3J5J2vqCawqrint",
+      "nodetype": "DataPulledNode",
+      "input_slots": [
+        {
+          "id": "in",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "pre",
+          "datatype": "action"
+        },
+        {
+          "id": "out",
+          "datatype": "any"
+        },
+        {
+          "id": "post",
+          "datatype": "action"
+        }
+      ],
+      "pos": {
+        "x": 243.11081530569885,
+        "y": 193.9602329444854
+      },
+      "size": {
+        "width": 109,
+        "height": 109
+      },
+      "label": "Data Pulled",
+      "data": {}
+    },
+    {
+      "id": "VRwJKLcPdQHeWjDuevd4bn",
+      "nodetype": "StringNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": 184.27620654126827,
+        "y": 38.66738271026158
+      },
+      "size": {
+        "width": 178,
+        "height": 88
+      },
+      "label": "String",
+      "data": {
+        "value": "Data Pulled!"
+      }
+    },
+    {
+      "id": "E3F8saaqabNSAAEGDqdeKu",
+      "nodetype": "ConsoleNode",
+      "input_slots": [
+        {
+          "id": "trigger",
+          "datatype": "action_param"
+        },
+        {
+          "id": "input",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [],
+      "pos": {
+        "x": 510.98014438631105,
+        "y": 105.10021686816714
+      },
+      "size": {
+        "width": 106,
+        "height": 89
+      },
+      "label": "Console",
+      "data": {}
+    },
+    {
+      "id": "hRn77HTLFqaC68WDG5FXYx",
+      "nodetype": "StringNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": 1.35840290100748,
+        "y": 172.44308985015374
+      },
+      "size": {
+        "width": 178,
+        "height": 88
+      },
+      "label": "String",
+      "data": {
+        "value": "Value"
+      }
+    },
+    {
+      "id": "Wrkr4kimPgBEaaEpLmShzQ",
+      "nodetype": "ConsoleNode",
+      "input_slots": [
+        {
+          "id": "trigger",
+          "datatype": "action_param"
+        },
+        {
+          "id": "input",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [],
+      "pos": {
+        "x": 628.375152692747,
+        "y": 276.1875157953762
+      },
+      "size": {
+        "width": 106,
+        "height": 89
+      },
+      "label": "Console",
+      "data": {}
+    },
+    {
+      "id": "emAkT7wqgym9g62hUe7SZF",
+      "nodetype": "ButtonNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "pressed",
+          "datatype": "action"
+        }
+      ],
+      "pos": {
+        "x": 384.4847478390661,
+        "y": 386.302213509165
+      },
+      "size": {
+        "width": 149,
+        "height": 91
+      },
+      "label": "Button Node",
+      "data": {
+        "button_label": "Press!"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edgeid": "edge_VRwJKLcPdQHeWjDuevd4bn-value_E3F8saaqabNSAAEGDqdeKu-input",
+      "src_id": "VRwJKLcPdQHeWjDuevd4bn",
+      "src_slot": "value",
+      "dst_id": "E3F8saaqabNSAAEGDqdeKu",
+      "dst_slot": "input"
+    },
+    {
+      "edgeid": "edge_bZYqSZb3J5J2vqCawqrint-pre_E3F8saaqabNSAAEGDqdeKu-trigger",
+      "src_id": "bZYqSZb3J5J2vqCawqrint",
+      "src_slot": "pre",
+      "dst_id": "E3F8saaqabNSAAEGDqdeKu",
+      "dst_slot": "trigger"
+    },
+    {
+      "edgeid": "edge_hRn77HTLFqaC68WDG5FXYx-value_bZYqSZb3J5J2vqCawqrint-in",
+      "src_id": "hRn77HTLFqaC68WDG5FXYx",
+      "src_slot": "value",
+      "dst_id": "bZYqSZb3J5J2vqCawqrint",
+      "dst_slot": "in"
+    },
+    {
+      "edgeid": "edge_bZYqSZb3J5J2vqCawqrint-out_Wrkr4kimPgBEaaEpLmShzQ-input",
+      "src_id": "bZYqSZb3J5J2vqCawqrint",
+      "src_slot": "out",
+      "dst_id": "Wrkr4kimPgBEaaEpLmShzQ",
+      "dst_slot": "input"
+    },
+    {
+      "edgeid": "edge_emAkT7wqgym9g62hUe7SZF-pressed_Wrkr4kimPgBEaaEpLmShzQ-trigger",
+      "src_id": "emAkT7wqgym9g62hUe7SZF",
+      "src_slot": "pressed",
+      "dst_id": "Wrkr4kimPgBEaaEpLmShzQ",
+      "dst_slot": "trigger"
+    }
+  ]
+}

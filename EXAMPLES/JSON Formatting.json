@@ -1,0 +1,376 @@
+{
+  "nodes": [
+    {
+      "id": "CnCStVA8cHeMdGdunrepDz",
+      "nodetype": "JSONFormatNode",
+      "input_slots": [
+        {
+          "id": "json_data",
+          "datatype": "json"
+        },
+        {
+          "id": "template",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "formatted",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": 358.1591934172011,
+        "y": 302.95702518298725
+      },
+      "size": {
+        "width": 165,
+        "height": 89
+      },
+      "label": "JSON Format",
+      "data": {}
+    },
+    {
+      "id": "2DvTmr5QBw58aATZdiPHJV",
+      "nodetype": "ButtonNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "pressed",
+          "datatype": "action"
+        }
+      ],
+      "pos": {
+        "x": 376.2118892942419,
+        "y": 189.4194778261059
+      },
+      "size": {
+        "width": 149,
+        "height": 91
+      },
+      "label": "Button Node",
+      "data": {
+        "button_label": "Press!"
+      }
+    },
+    {
+      "id": "CchqeQmq47AuxNAnWNHo2U",
+      "nodetype": "JSONNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "json"
+        }
+      ],
+      "pos": {
+        "x": -56.21849039042499,
+        "y": 43.03588755997116
+      },
+      "size": {
+        "width": 288,
+        "height": 300
+      },
+      "label": "JSON",
+      "data": {
+        "value": "{\n    \"example1\": \"This is an Example!\",\n    \"Whataboutthis\": \"This one won't be used!\",\n    \"SomethingMoreComplex\": {\n        \"IF\": \"This one had been used it would have turned the object here into a string first!\"\n    }\n}"
+      }
+    },
+    {
+      "id": "YZeNfEvT3gWUPpg4NWYyoX",
+      "nodetype": "StringNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": -201.67906246550564,
+        "y": 662.382294769979
+      },
+      "size": {
+        "width": 467,
+        "height": 122
+      },
+      "label": "String",
+      "data": {
+        "value": "Hello world! This is an example of how {{SomethingMoreComplex.IF}} works!"
+      }
+    },
+    {
+      "id": "7efdTupMe8MCXQ9J6vRPUd",
+      "nodetype": "JSONFormatNode",
+      "input_slots": [
+        {
+          "id": "json_data",
+          "datatype": "json"
+        },
+        {
+          "id": "template",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "formatted",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": 356.4264629509031,
+        "y": 409.7549830758093
+      },
+      "size": {
+        "width": 165,
+        "height": 89
+      },
+      "label": "JSON Format",
+      "data": {}
+    },
+    {
+      "id": "DGGK2N9k65PNsxA7UHQZoQ",
+      "nodetype": "TextDisplayNode",
+      "input_slots": [
+        {
+          "id": "update",
+          "datatype": "action_param"
+        },
+        {
+          "id": "text",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [],
+      "pos": {
+        "x": 732.7248853907544,
+        "y": 157.12767138163946
+      },
+      "size": {
+        "width": 403,
+        "height": 209
+      },
+      "label": "Text Display",
+      "data": {
+        "display_text": "Hello world! This is an example of how This is an Example! works!"
+      }
+    },
+    {
+      "id": "3HLMWLysdZwJ66wDGT2dZP",
+      "nodetype": "TextDisplayNode",
+      "input_slots": [
+        {
+          "id": "update",
+          "datatype": "action_param"
+        },
+        {
+          "id": "text",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [],
+      "pos": {
+        "x": 728.4968132285088,
+        "y": 385.44356814289756
+      },
+      "size": {
+        "width": 417,
+        "height": 202
+      },
+      "label": "Text Display",
+      "data": {
+        "display_text": "Hello world! This is an example of how {\"IF\": \"This one had been used it would have turned the object here into a string first!\"} works!"
+      }
+    },
+    {
+      "id": "AHD5RwCjCbpdWrLpUTgroT",
+      "nodetype": "TextDisplayNode",
+      "input_slots": [
+        {
+          "id": "update",
+          "datatype": "action_param"
+        },
+        {
+          "id": "text",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [],
+      "pos": {
+        "x": 726.3827771473862,
+        "y": 604.2463025391032
+      },
+      "size": {
+        "width": 423,
+        "height": 203
+      },
+      "label": "Text Display",
+      "data": {
+        "display_text": "Hello world! This is an example of how This one had been used it would have turned the object here into a string first! works!"
+      }
+    },
+    {
+      "id": "XKcFdTg4ZNyvYn3vGYw7a8",
+      "nodetype": "JSONFormatNode",
+      "input_slots": [
+        {
+          "id": "json_data",
+          "datatype": "json"
+        },
+        {
+          "id": "template",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "formatted",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": 356.4264629509031,
+        "y": 511.22871496970174
+      },
+      "size": {
+        "width": 165,
+        "height": 89
+      },
+      "label": "JSON Format",
+      "data": {}
+    },
+    {
+      "id": "jc7GCoYqSe5PU5s2xff4aF",
+      "nodetype": "StringNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": -209.0781887494353,
+        "y": 406.58392895412516
+      },
+      "size": {
+        "width": 464,
+        "height": 102
+      },
+      "label": "String",
+      "data": {
+        "value": "Hello world! This is an example of how {{example1}} works!"
+      }
+    },
+    {
+      "id": "L7quvHeEGL2aMoESN2sKoP",
+      "nodetype": "StringNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": -200.62204442494425,
+        "y": 542.9392561865432
+      },
+      "size": {
+        "width": 460,
+        "height": 97
+      },
+      "label": "String",
+      "data": {
+        "value": "Hello world! This is an example of how {{SomethingMoreComplex}} works!"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edgeid": "edge_CchqeQmq47AuxNAnWNHo2U-value_CnCStVA8cHeMdGdunrepDz-json_data",
+      "src_id": "CchqeQmq47AuxNAnWNHo2U",
+      "src_slot": "value",
+      "dst_id": "CnCStVA8cHeMdGdunrepDz",
+      "dst_slot": "json_data"
+    },
+    {
+      "edgeid": "edge_CnCStVA8cHeMdGdunrepDz-formatted_DGGK2N9k65PNsxA7UHQZoQ-text",
+      "src_id": "CnCStVA8cHeMdGdunrepDz",
+      "src_slot": "formatted",
+      "dst_id": "DGGK2N9k65PNsxA7UHQZoQ",
+      "dst_slot": "text"
+    },
+    {
+      "edgeid": "edge_2DvTmr5QBw58aATZdiPHJV-pressed_DGGK2N9k65PNsxA7UHQZoQ-update",
+      "src_id": "2DvTmr5QBw58aATZdiPHJV",
+      "src_slot": "pressed",
+      "dst_id": "DGGK2N9k65PNsxA7UHQZoQ",
+      "dst_slot": "update"
+    },
+    {
+      "edgeid": "edge_7efdTupMe8MCXQ9J6vRPUd-formatted_3HLMWLysdZwJ66wDGT2dZP-text",
+      "src_id": "7efdTupMe8MCXQ9J6vRPUd",
+      "src_slot": "formatted",
+      "dst_id": "3HLMWLysdZwJ66wDGT2dZP",
+      "dst_slot": "text"
+    },
+    {
+      "edgeid": "edge_2DvTmr5QBw58aATZdiPHJV-pressed_3HLMWLysdZwJ66wDGT2dZP-update",
+      "src_id": "2DvTmr5QBw58aATZdiPHJV",
+      "src_slot": "pressed",
+      "dst_id": "3HLMWLysdZwJ66wDGT2dZP",
+      "dst_slot": "update"
+    },
+    {
+      "edgeid": "edge_2DvTmr5QBw58aATZdiPHJV-pressed_AHD5RwCjCbpdWrLpUTgroT-update",
+      "src_id": "2DvTmr5QBw58aATZdiPHJV",
+      "src_slot": "pressed",
+      "dst_id": "AHD5RwCjCbpdWrLpUTgroT",
+      "dst_slot": "update"
+    },
+    {
+      "edgeid": "edge_XKcFdTg4ZNyvYn3vGYw7a8-formatted_AHD5RwCjCbpdWrLpUTgroT-text",
+      "src_id": "XKcFdTg4ZNyvYn3vGYw7a8",
+      "src_slot": "formatted",
+      "dst_id": "AHD5RwCjCbpdWrLpUTgroT",
+      "dst_slot": "text"
+    },
+    {
+      "edgeid": "edge_YZeNfEvT3gWUPpg4NWYyoX-value_XKcFdTg4ZNyvYn3vGYw7a8-template",
+      "src_id": "YZeNfEvT3gWUPpg4NWYyoX",
+      "src_slot": "value",
+      "dst_id": "XKcFdTg4ZNyvYn3vGYw7a8",
+      "dst_slot": "template"
+    },
+    {
+      "edgeid": "edge_CchqeQmq47AuxNAnWNHo2U-value_7efdTupMe8MCXQ9J6vRPUd-json_data",
+      "src_id": "CchqeQmq47AuxNAnWNHo2U",
+      "src_slot": "value",
+      "dst_id": "7efdTupMe8MCXQ9J6vRPUd",
+      "dst_slot": "json_data"
+    },
+    {
+      "edgeid": "edge_CchqeQmq47AuxNAnWNHo2U-value_XKcFdTg4ZNyvYn3vGYw7a8-json_data",
+      "src_id": "CchqeQmq47AuxNAnWNHo2U",
+      "src_slot": "value",
+      "dst_id": "XKcFdTg4ZNyvYn3vGYw7a8",
+      "dst_slot": "json_data"
+    },
+    {
+      "edgeid": "edge_jc7GCoYqSe5PU5s2xff4aF-value_CnCStVA8cHeMdGdunrepDz-template",
+      "src_id": "jc7GCoYqSe5PU5s2xff4aF",
+      "src_slot": "value",
+      "dst_id": "CnCStVA8cHeMdGdunrepDz",
+      "dst_slot": "template"
+    },
+    {
+      "edgeid": "edge_L7quvHeEGL2aMoESN2sKoP-value_7efdTupMe8MCXQ9J6vRPUd-template",
+      "src_id": "L7quvHeEGL2aMoESN2sKoP",
+      "src_slot": "value",
+      "dst_id": "7efdTupMe8MCXQ9J6vRPUd",
+      "dst_slot": "template"
+    }
+  ]
+}

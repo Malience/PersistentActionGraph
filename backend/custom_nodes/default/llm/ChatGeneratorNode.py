@@ -81,24 +81,31 @@ class ChatGeneratorNode(CustomNode):
             await self.set_state(NodeState.ERROR)
             return
         
+        model = conn.get("model")
+        api_key = conn.get("api_key", None)
+        
         # Prepare the request body
-        model = "kcpp"
-        header = {
+        body_header = {
             "model": model,
             "messages": messages,
         }
         
         # Merge all settings together
-        body_data = {**header, **settings}
+        body_data = {**body_header, **settings}
         if sett:
             body_data.update(sett)
+        
+        headers = {'Content-Type': 'application/json'}
+
+        if api_key and len(api_key) > 0:
+            headers.update({"Authorization": f"Bearer {api_key}"})
         
         body = json.dumps(body_data)
         
         try:
             # Make the API request
             async with aiohttp.ClientSession() as session:
-                async with session.post(api_url, data=body, headers={'Content-Type': 'application/json'}) as response:
+                async with session.post(api_url, data=body, headers=headers) as response:
                     if not response.ok:
                         raise Exception(f"Response status: {response.status}")
                     

@@ -1,0 +1,703 @@
+{
+  "nodes": [
+    {
+      "id": "TGA3btk7L3JaLrD7atBRTB",
+      "nodetype": "HTTPEndpointNode",
+      "input_slots": [
+        {
+          "id": "data",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "request",
+          "datatype": "action_param"
+        },
+        {
+          "id": "body",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": 473.339647412741,
+        "y": 545.7837534376373
+      },
+      "size": {
+        "width": 219,
+        "height": 332
+      },
+      "label": "HTTP Endpoint",
+      "data": {
+        "path": "/page",
+        "method": "GET",
+        "response_type": "HTML",
+        "_endpoint": "/api/page",
+        "_method": "GET",
+        "_body": ""
+      }
+    },
+    {
+      "id": "YRJQRDfb9SHuuNN9izLmtS",
+      "nodetype": "TextAreaNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": -81.38104400057418,
+        "y": 769.1271935706509
+      },
+      "size": {
+        "width": 293,
+        "height": 234
+      },
+      "label": "TextArea",
+      "data": {
+        "value": "You are a web page generator. You will only respond in strict HTML code. Your full response must be under 400 tokens.\n\nReturn a fully functional webpage based on the following idea:\n{{content}}"
+      }
+    },
+    {
+      "id": "3coKAeJa5zSmwzZvJJutFF",
+      "nodetype": "ChatGeneratorNode",
+      "input_slots": [
+        {
+          "id": "activate",
+          "datatype": "action_param"
+        },
+        {
+          "id": "api_connection",
+          "datatype": "api_connection"
+        },
+        {
+          "id": "settings",
+          "datatype": "json"
+        },
+        {
+          "id": "messages",
+          "datatype": "message[]"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "done",
+          "datatype": "action_param"
+        },
+        {
+          "id": "output",
+          "datatype": "message"
+        }
+      ],
+      "pos": {
+        "x": 249.7441623009455,
+        "y": 624.4275018456129
+      },
+      "size": {
+        "width": 195,
+        "height": 185
+      },
+      "label": "Chat Generator",
+      "data": {
+        "max_length": 1024,
+        "max_context_length": 2048,
+        "_output": {
+          "role": "assistant",
+          "content": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Gratitude Journal</title>\n    <style>\n        body { font-family: 'Segoe UI', sans-serif; background: #fdf6e3; display: flex; justify-content: center; padding: 20px; }\n        .card { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 100%; max-width: 400px; }\n        h2 { color: #856404; text-align: center; }\n        .input-group { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }\n        input { padding: 10px; border: 1px solid #ddd; border-radius: 5px; outline: none; }\n        button { padding: 10px; background: #d4a373; border: none; color: white; border-radius: 5px; cursor: pointer; font-weight: bold; }\n        button:hover { background: #bc8a5f; }\n        #list { max-height: 300px; overflow-y: auto; margin-top: 20px; }\n        .entry { background: #faedcd; padding: 10px; margin-bottom: 10px; border-radius: 8px; border-left: 5px solid #d4a373; animation: fadeIn 0.3s; }\n        .date { font-size: 0.8rem; color: #666; display: block; margin-bottom: 5px; }\n        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }\n    </style>\n</head>\n<body>\n    <div class=\"card\">\n        <h2>✨ Daily Gratitude</h2>\n        <div class=\"input-group\">\n            <input type=\"text\" id=\"i1\" placeholder=\"Thing 1...\">\n            <input type=\"text\" id=\"i2\" placeholder=\"Thing 2...\">\n            <input type=\"text\" id=\"i3\" placeholder=\"Thing 3...\">\n            <button onclick=\"save()\">Save Entry</button>\n        </div>\n        <div id=\"list\"></div>\n    </div>\n\n    <script>\n        function save() {\n            const entries = JSON.parse(localStorage.getItem('gratitude') || '[]');\n            const day = new Date().toLocaleDateString();\n            const texts = [document.getElementById('i1').value, document.getElementById('i2').value, document.getElementById('i3').value];\n            if (!texts[0] || !texts[1] || !texts[2]) return alert('Please fill all three!');\n            entries.unshift({ date: day, items: texts });\n            localStorage.setItem('gratitude', JSON.stringify(entries));\n            render();\n            ['i1','i2','i3'].forEach(id => document.getElementById(id).value = '');\n        }\n        function render() {\n            const entries = JSON.parse(localStorage.getItem('gratitude') || '[]');\n            document.getElementById('list').innerHTML = entries.map(e => `\n                <div class=\"entry\"><span class=\"date\">${e.date}</span>${e.items.join('<br>')}</div>\n            `).join('');\n        }\n        render();\n    </script>\n</body>\n</html>\n```"
+        }
+      }
+    },
+    {
+      "id": "DtJw5CY2r7KMfg4ixvwacX",
+      "nodetype": "APIConnectionNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "connection",
+          "datatype": "api_connection"
+        }
+      ],
+      "pos": {
+        "x": 698.605801134013,
+        "y": 696.3656311205348
+      },
+      "size": {
+        "width": 310,
+        "height": 181
+      },
+      "label": "API Connection",
+      "data": {
+        "api_url": "http://127.0.0.1:5001/v1/chat/completions"
+      }
+    },
+    {
+      "id": "PvpJYRhQaFpD3wYQ2EsiUx",
+      "nodetype": "APISettingsNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "settings",
+          "datatype": "json"
+        }
+      ],
+      "pos": {
+        "x": 18.25142605136527,
+        "y": 146.69256857951572
+      },
+      "size": {
+        "width": 183,
+        "height": 349
+      },
+      "label": "API Settings",
+      "data": {
+        "temperature": 0.7,
+        "top_k": 0,
+        "top_p": 1,
+        "typical": 1,
+        "top_a": 0,
+        "tfs": 1,
+        "rep_pen": 1.05,
+        "rep_pen_range": 4096,
+        "rep_pen_slope": 1
+      }
+    },
+    {
+      "id": "ZnzPegik94fyuinABeAY4V",
+      "nodetype": "ToArrayNode",
+      "input_slots": [
+        {
+          "id": "input",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": 86.16243971422304,
+        "y": 687.994505060871
+      },
+      "size": {
+        "width": 130,
+        "height": 69
+      },
+      "label": "To Array",
+      "data": {}
+    },
+    {
+      "id": "fKtYYWMQBYpEfghysfLRf6",
+      "nodetype": "ChatMessageNode",
+      "input_slots": [
+        {
+          "id": "activate",
+          "datatype": "action_param"
+        },
+        {
+          "id": "text",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "message_output",
+          "datatype": "action_param"
+        },
+        {
+          "id": "cached_message",
+          "datatype": "message"
+        },
+        {
+          "id": "pull_message",
+          "datatype": "message"
+        }
+      ],
+      "pos": {
+        "x": -42.8592798173578,
+        "y": 514.0024594068934
+      },
+      "size": {
+        "width": 252,
+        "height": 145
+      },
+      "label": "Chat Message",
+      "data": {
+        "role": "user",
+        "cached_message": {
+          "role": "user",
+          "content": "You are a web page generator. You will only respond in strict HTML code. Your full response must be under 400 tokens.\n\nReturn a fully functional webpage based on the following idea:\nCreate a \"Daily Gratitude Journal\" single-page app where users can type three things they are thankful for into text fields and save them to a visually appealing, scrollable list using local storage."
+        }
+      }
+    },
+    {
+      "id": "WAsNeam7GFtWBQ9WCCVvrv",
+      "nodetype": "GetJSONNode",
+      "input_slots": [
+        {
+          "id": "json",
+          "datatype": "json"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": 264.07183701059296,
+        "y": 529.2217030652279
+      },
+      "size": {
+        "width": 176,
+        "height": 88
+      },
+      "label": "Get JSON",
+      "data": {
+        "key": "content"
+      }
+    },
+    {
+      "id": "bGxdGcm9n2gTswE7WiWnS9",
+      "nodetype": "ToJSONNode",
+      "input_slots": [
+        {
+          "id": "input",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "json"
+        }
+      ],
+      "pos": {
+        "x": 284.1551797812592,
+        "y": 452.0593861042472
+      },
+      "size": {
+        "width": 130,
+        "height": 69
+      },
+      "label": "To JSON",
+      "data": {}
+    },
+    {
+      "id": "QE2S3RLdarEorrcfYTNNW3",
+      "nodetype": "ChatGeneratorNode",
+      "input_slots": [
+        {
+          "id": "activate",
+          "datatype": "action_param"
+        },
+        {
+          "id": "api_connection",
+          "datatype": "api_connection"
+        },
+        {
+          "id": "settings",
+          "datatype": "json"
+        },
+        {
+          "id": "messages",
+          "datatype": "message[]"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "done",
+          "datatype": "action_param"
+        },
+        {
+          "id": "output",
+          "datatype": "message"
+        }
+      ],
+      "pos": {
+        "x": -511.68158795920885,
+        "y": 627.5327960590421
+      },
+      "size": {
+        "width": 195,
+        "height": 185
+      },
+      "label": "Chat Generator",
+      "data": {
+        "max_length": 512,
+        "max_context_length": 2048,
+        "_output": {
+          "role": "assistant",
+          "content": "Create a \"Daily Gratitude Journal\" single-page app where users can type three things they are thankful for into text fields and save them to a visually appealing, scrollable list using local storage."
+        }
+      }
+    },
+    {
+      "id": "FdQSq5Y3YCFxeDwWKgRj2Z",
+      "nodetype": "TextAreaNode",
+      "input_slots": [],
+      "output_slots": [
+        {
+          "id": "value",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": -859.496483890003,
+        "y": 841.9342461991662
+      },
+      "size": {
+        "width": 293,
+        "height": 234
+      },
+      "label": "TextArea",
+      "data": {
+        "value": "You are a web page designer. Come up with a small easy to implement web page idea. This idea will be implemented by an HTML developer later.\n\nKeep your response short and concise. Under 400 tokens. One Sentence."
+      }
+    },
+    {
+      "id": "MRZ8KsHx5qD6NRpXRmZj6t",
+      "nodetype": "ChatMessageNode",
+      "input_slots": [
+        {
+          "id": "activate",
+          "datatype": "action_param"
+        },
+        {
+          "id": "text",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "message_output",
+          "datatype": "action_param"
+        },
+        {
+          "id": "cached_message",
+          "datatype": "message"
+        },
+        {
+          "id": "pull_message",
+          "datatype": "message"
+        }
+      ],
+      "pos": {
+        "x": -818.2829879398861,
+        "y": 610.2377323379822
+      },
+      "size": {
+        "width": 252,
+        "height": 145
+      },
+      "label": "Chat Message",
+      "data": {
+        "role": "user",
+        "cached_message": {
+          "role": "user",
+          "content": "You are a web page designer. Come up with a small easy to implement web page idea. This idea will be implemented by an HTML developer later.\n\nKeep your response short and concise. Under 400 tokens. One Sentence."
+        }
+      }
+    },
+    {
+      "id": "4A7NTMMDkjJtz5ptK6KzTV",
+      "nodetype": "ToArrayNode",
+      "input_slots": [
+        {
+          "id": "input",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "any"
+        }
+      ],
+      "pos": {
+        "x": -694.611550457808,
+        "y": 764.6423483182263
+      },
+      "size": {
+        "width": 130,
+        "height": 69
+      },
+      "label": "To Array",
+      "data": {}
+    },
+    {
+      "id": "5DbdWYsFMxtEBn6PVjURLe",
+      "nodetype": "ToJSONNode",
+      "input_slots": [
+        {
+          "id": "input",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "output",
+          "datatype": "json"
+        }
+      ],
+      "pos": {
+        "x": -473.0250098143382,
+        "y": 543.8029632900023
+      },
+      "size": {
+        "width": 130,
+        "height": 69
+      },
+      "label": "To JSON",
+      "data": {}
+    },
+    {
+      "id": "2r4tiSRmYyJtAVztrJXRzw",
+      "nodetype": "JSONFormatNode",
+      "input_slots": [
+        {
+          "id": "json_data",
+          "datatype": "json"
+        },
+        {
+          "id": "template",
+          "datatype": "string"
+        }
+      ],
+      "output_slots": [
+        {
+          "id": "formatted",
+          "datatype": "string"
+        }
+      ],
+      "pos": {
+        "x": -99.41648288598914,
+        "y": 671.0083421225103
+      },
+      "size": {
+        "width": 165,
+        "height": 89
+      },
+      "label": "JSON Format",
+      "data": {}
+    },
+    {
+      "id": "LXZUxHgp2gX4ouvLrgQPwi",
+      "nodetype": "ConsoleNode",
+      "input_slots": [
+        {
+          "id": "trigger",
+          "datatype": "action_param"
+        },
+        {
+          "id": "input",
+          "datatype": "any"
+        }
+      ],
+      "output_slots": [],
+      "pos": {
+        "x": -276.21766980890027,
+        "y": 704.9883647865668
+      },
+      "size": {
+        "width": 106,
+        "height": 89
+      },
+      "label": "Console",
+      "data": {}
+    },
+    {
+      "id": "Fh2TBSn9FhALs92v42Rb2V",
+      "nodetype": "CommentNode",
+      "input_slots": [],
+      "output_slots": [],
+      "pos": {
+        "x": -528.7077356603003,
+        "y": 917.7285589692069
+      },
+      "size": {
+        "width": 342,
+        "height": 119
+      },
+      "label": "Comment",
+      "data": {
+        "value": "This agent comes up with a simple idea!"
+      }
+    },
+    {
+      "id": "6SdmVWEfhw4qHYEBw7gkmS",
+      "nodetype": "CommentNode",
+      "input_slots": [],
+      "output_slots": [],
+      "pos": {
+        "x": -56.95753747630957,
+        "y": 1020.5794609972759
+      },
+      "size": {
+        "width": 342,
+        "height": 119
+      },
+      "label": "Comment",
+      "data": {
+        "value": "This agent turns that idea into a webpage"
+      }
+    },
+    {
+      "id": "X8W9HJY3AUctjn5tHfMt2G",
+      "nodetype": "CommentNode",
+      "input_slots": [],
+      "output_slots": [],
+      "pos": {
+        "x": 443.01199570922324,
+        "y": 891.6232600487874
+      },
+      "size": {
+        "width": 342,
+        "height": 119
+      },
+      "label": "Comment",
+      "data": {
+        "value": "Connect your API above and go to the webpage listed under Active Endpoint!\n\nEvery time you refresh, you'll get something new!"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edgeid": "edge_DtJw5CY2r7KMfg4ixvwacX-connection_3coKAeJa5zSmwzZvJJutFF-api_connection",
+      "src_id": "DtJw5CY2r7KMfg4ixvwacX",
+      "src_slot": "connection",
+      "dst_id": "3coKAeJa5zSmwzZvJJutFF",
+      "dst_slot": "api_connection"
+    },
+    {
+      "edgeid": "edge_PvpJYRhQaFpD3wYQ2EsiUx-settings_3coKAeJa5zSmwzZvJJutFF-settings",
+      "src_id": "PvpJYRhQaFpD3wYQ2EsiUx",
+      "src_slot": "settings",
+      "dst_id": "3coKAeJa5zSmwzZvJJutFF",
+      "dst_slot": "settings"
+    },
+    {
+      "edgeid": "edge_ZnzPegik94fyuinABeAY4V-output_3coKAeJa5zSmwzZvJJutFF-messages",
+      "src_id": "ZnzPegik94fyuinABeAY4V",
+      "src_slot": "output",
+      "dst_id": "3coKAeJa5zSmwzZvJJutFF",
+      "dst_slot": "messages"
+    },
+    {
+      "edgeid": "edge_fKtYYWMQBYpEfghysfLRf6-pull_message_ZnzPegik94fyuinABeAY4V-input",
+      "src_id": "fKtYYWMQBYpEfghysfLRf6",
+      "src_slot": "pull_message",
+      "dst_id": "ZnzPegik94fyuinABeAY4V",
+      "dst_slot": "input"
+    },
+    {
+      "edgeid": "edge_3coKAeJa5zSmwzZvJJutFF-output_bGxdGcm9n2gTswE7WiWnS9-input",
+      "src_id": "3coKAeJa5zSmwzZvJJutFF",
+      "src_slot": "output",
+      "dst_id": "bGxdGcm9n2gTswE7WiWnS9",
+      "dst_slot": "input"
+    },
+    {
+      "edgeid": "edge_bGxdGcm9n2gTswE7WiWnS9-output_WAsNeam7GFtWBQ9WCCVvrv-json",
+      "src_id": "bGxdGcm9n2gTswE7WiWnS9",
+      "src_slot": "output",
+      "dst_id": "WAsNeam7GFtWBQ9WCCVvrv",
+      "dst_slot": "json"
+    },
+    {
+      "edgeid": "edge_WAsNeam7GFtWBQ9WCCVvrv-value_TGA3btk7L3JaLrD7atBRTB-data",
+      "src_id": "WAsNeam7GFtWBQ9WCCVvrv",
+      "src_slot": "value",
+      "dst_id": "TGA3btk7L3JaLrD7atBRTB",
+      "dst_slot": "data"
+    },
+    {
+      "edgeid": "edge_PvpJYRhQaFpD3wYQ2EsiUx-settings_QE2S3RLdarEorrcfYTNNW3-settings",
+      "src_id": "PvpJYRhQaFpD3wYQ2EsiUx",
+      "src_slot": "settings",
+      "dst_id": "QE2S3RLdarEorrcfYTNNW3",
+      "dst_slot": "settings"
+    },
+    {
+      "edgeid": "edge_DtJw5CY2r7KMfg4ixvwacX-connection_QE2S3RLdarEorrcfYTNNW3-api_connection",
+      "src_id": "DtJw5CY2r7KMfg4ixvwacX",
+      "src_slot": "connection",
+      "dst_id": "QE2S3RLdarEorrcfYTNNW3",
+      "dst_slot": "api_connection"
+    },
+    {
+      "edgeid": "edge_QE2S3RLdarEorrcfYTNNW3-done_3coKAeJa5zSmwzZvJJutFF-activate",
+      "src_id": "QE2S3RLdarEorrcfYTNNW3",
+      "src_slot": "done",
+      "dst_id": "3coKAeJa5zSmwzZvJJutFF",
+      "dst_slot": "activate"
+    },
+    {
+      "edgeid": "edge_MRZ8KsHx5qD6NRpXRmZj6t-pull_message_4A7NTMMDkjJtz5ptK6KzTV-input",
+      "src_id": "MRZ8KsHx5qD6NRpXRmZj6t",
+      "src_slot": "pull_message",
+      "dst_id": "4A7NTMMDkjJtz5ptK6KzTV",
+      "dst_slot": "input"
+    },
+    {
+      "edgeid": "edge_4A7NTMMDkjJtz5ptK6KzTV-output_QE2S3RLdarEorrcfYTNNW3-messages",
+      "src_id": "4A7NTMMDkjJtz5ptK6KzTV",
+      "src_slot": "output",
+      "dst_id": "QE2S3RLdarEorrcfYTNNW3",
+      "dst_slot": "messages"
+    },
+    {
+      "edgeid": "edge_FdQSq5Y3YCFxeDwWKgRj2Z-value_MRZ8KsHx5qD6NRpXRmZj6t-text",
+      "src_id": "FdQSq5Y3YCFxeDwWKgRj2Z",
+      "src_slot": "value",
+      "dst_id": "MRZ8KsHx5qD6NRpXRmZj6t",
+      "dst_slot": "text"
+    },
+    {
+      "edgeid": "edge_QE2S3RLdarEorrcfYTNNW3-output_5DbdWYsFMxtEBn6PVjURLe-input",
+      "src_id": "QE2S3RLdarEorrcfYTNNW3",
+      "src_slot": "output",
+      "dst_id": "5DbdWYsFMxtEBn6PVjURLe",
+      "dst_slot": "input"
+    },
+    {
+      "edgeid": "edge_YRJQRDfb9SHuuNN9izLmtS-value_2r4tiSRmYyJtAVztrJXRzw-template",
+      "src_id": "YRJQRDfb9SHuuNN9izLmtS",
+      "src_slot": "value",
+      "dst_id": "2r4tiSRmYyJtAVztrJXRzw",
+      "dst_slot": "template"
+    },
+    {
+      "edgeid": "edge_2r4tiSRmYyJtAVztrJXRzw-formatted_fKtYYWMQBYpEfghysfLRf6-text",
+      "src_id": "2r4tiSRmYyJtAVztrJXRzw",
+      "src_slot": "formatted",
+      "dst_id": "fKtYYWMQBYpEfghysfLRf6",
+      "dst_slot": "text"
+    },
+    {
+      "edgeid": "edge_5DbdWYsFMxtEBn6PVjURLe-output_2r4tiSRmYyJtAVztrJXRzw-json_data",
+      "src_id": "5DbdWYsFMxtEBn6PVjURLe",
+      "src_slot": "output",
+      "dst_id": "2r4tiSRmYyJtAVztrJXRzw",
+      "dst_slot": "json_data"
+    },
+    {
+      "edgeid": "edge_QE2S3RLdarEorrcfYTNNW3-done_LXZUxHgp2gX4ouvLrgQPwi-trigger",
+      "src_id": "QE2S3RLdarEorrcfYTNNW3",
+      "src_slot": "done",
+      "dst_id": "LXZUxHgp2gX4ouvLrgQPwi",
+      "dst_slot": "trigger"
+    },
+    {
+      "edgeid": "edge_TGA3btk7L3JaLrD7atBRTB-request_QE2S3RLdarEorrcfYTNNW3-activate",
+      "src_id": "TGA3btk7L3JaLrD7atBRTB",
+      "src_slot": "request",
+      "dst_id": "QE2S3RLdarEorrcfYTNNW3",
+      "dst_slot": "activate"
+    }
+  ]
+}

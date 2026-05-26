@@ -132,6 +132,10 @@
         {
           "id": "cached_message",
           "datatype": "message"
+        },
+        {
+          "id": "pull_message",
+          "datatype": "message"
         }
       ],
       "pos": {
@@ -139,8 +143,8 @@
         "y": 187.04464657734573
       },
       "size": {
-        "width": 252,
-        "height": 125
+        "width": 249,
+        "height": 141
       },
       "label": "Chat Message",
       "data": {
@@ -208,12 +212,12 @@
         }
       ],
       "pos": {
-        "x": 372.1520311298947,
-        "y": 263.18557853761587
+        "x": 378.8975438015932,
+        "y": 217.31609237006612
       },
       "size": {
         "width": 233,
-        "height": 216
+        "height": 248
       },
       "label": "Message Database",
       "data": {

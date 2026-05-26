@@ -31,11 +31,10 @@ class JSONSchemaNode(CustomNode):
             try:
                 # Build the JSON schema from the data
                 schema = {
-                    "name": self.data["name"],
-                    "type": "object",
+                    "name": self.data["name"]
                 }
 
-                if self.data["description"]: schema["description"] = self.data["description"],
+                if self.data["description"]: schema["description"] = self.data["description"]
                 
                 # Parse properties array
                 properties = {}
@@ -73,13 +72,17 @@ class JSONSchemaNode(CustomNode):
                         }
                         properties.update(p)
 
-                print(properties)
-                schema["properties"] = properties
+                # print(properties)
+                schema["parameters"] = {
+                    "type": "object",
+                    "properties": properties
+                }
+                # schema["properties"] = properties
                 
                 # Parse required fields
                 if self.data["required"]:
                     required_list = [name.strip() for name in self.data["required"].split(",") if name.strip()]
-                    schema["required"] = required_list
+                    schema["parameters"]["required"] = required_list
                 
                 return schema
             except Exception:

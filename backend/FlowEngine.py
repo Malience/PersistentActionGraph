@@ -2,11 +2,16 @@ import os
 import shortuuid
 import importlib.util as imp
 from pydantic import BaseModel
+from fastapi import FastAPI
 
 from EdgeMap import EdgeMap, Edge
 from sockets.TextSocket import TextSocket
 from sockets.JsonSocket import JsonSocket
 from nodes.NodeState import NodeState
+from app.DynamicAPIRouter import DynamicAPIRouter
+from app.DynamicWebsocketRouter import DynamicWebsocketRouter
+
+
 
 CUSTOM_BACKEND_NODES_DIR = "./backend/custom_nodes"
 
@@ -19,9 +24,12 @@ class Dimension(BaseModel):
     height: float
 
 class FlowEngine:
-    def __init__(self):
+    def __init__(self, app: FastAPI):
         self.custom_nodes = {}
         self.routes = {}
+
+        self.dynamic_api_router = DynamicAPIRouter(app)
+        self.dynamic_websocket_router = DynamicWebsocketRouter(app)
 
         self.nodes = {}
         self.edges: EdgeMap = EdgeMap()
@@ -97,7 +105,7 @@ class FlowEngine:
         
         print(self.custom_nodes)
 
-    def add_node(self, data: dict) -> None:
+    async def add_node(self, data: dict) -> None:
         if "id" not in data or "nodetype" not in data:
             print(f"ERROR: Could not add node. Data was not formatted correctly: {data}")
 
@@ -120,9 +128,11 @@ class FlowEngine:
             size = data["size"]
             self.resize_node(id, Dimension(width=size["width"], height=size["height"]))
         
+        await node.startup()
+        
 
 
-    def create_node(self, nodetype: str, id: str = None) -> dict:
+    async def create_node(self, nodetype: str, id: str = None) -> dict:
         if nodetype not in self.custom_nodes:
             print(f"ERROR: Nodetype not found: {nodetype}")
             return
@@ -139,6 +149,8 @@ class FlowEngine:
         print(f"NODE ADDED: {id}")
         print(self.nodes)
 
+        
+        await self.nodes[id].startup()
         return self.nodes[id].serialize()
 
     def remove_node(self, nodeid: str) -> bool:
@@ -146,6 +158,7 @@ class FlowEngine:
             print(f"ERROR: ID does not exist: {nodeid}")
             return False
         
+        self.nodes[nodeid].cleanup()
         del self.nodes[nodeid]
         self.edges.remove_edges_by_node(nodeid)
 
@@ -184,8 +197,11 @@ class FlowEngine:
         return output
 
     def clear(self) -> None:
+        for node in self.nodes.values():
+            node.cleanup()
         self.nodes.clear()
         self.edges.clear()
+        self.dynamic_api_router.clear_all_endpoints()
 
     def add_edge(self, edgeid: str, src_id: str, src_slot: str, dst_id: str, dst_slot: str) -> None:
         print("ADD EDGE " + edgeid)
@@ -205,12 +221,12 @@ class FlowEngine:
         if removed_edge is None:
             print("ERROR: Edge does not exist: " + edgeid)
 
-    def load_graph(self, graph: dict) -> None:
+    async def load_graph(self, graph: dict) -> None:
         self.clear()
 
         nodes = graph["nodes"]
         for node in nodes:
-            self.add_node(node)
+            await self.add_node(node)
 
         edges = graph["edges"]
         for edge in edges:
@@ -275,6 +291,9 @@ class FlowEngine:
         
         await self.send_node_message(nodeid, "signal", data)
 
+    async def _receive_signal(self, nodeid: str, signal: str, params: any):
+        await self.nodes[nodeid].receive_signal(signal, params)
+
     async def receive_signal(self, nodeid: str, data: any):
         if nodeid not in self.nodes:
             print(f"ERROR: Couldn't find node to receive signal: {nodeid}")
@@ -283,7 +302,7 @@ class FlowEngine:
         signal = data["signal"]
         params = data["params"]
 
-        await self.nodes[nodeid].receive_signal(signal, params)
+        await self._receive_signal(nodeid, signal, params)
     
     async def receive_sync(self, nodeid: str, data: any):
         await self.nodes[nodeid]._sync_data(data) 

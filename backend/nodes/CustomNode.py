@@ -70,7 +70,13 @@ class CustomNode:
             self._input_slots[id] = datatype
         elif direction == "output":
             self._output_slots[id] = datatype
-        
+    
+    async def startup(self) -> None:
+        pass
+
+    def cleanup(self) -> None:
+        pass
+
     def serialize(self) -> dict:
         input_slots = []
         output_slots = []

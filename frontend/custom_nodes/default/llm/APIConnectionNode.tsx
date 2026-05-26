@@ -20,6 +20,22 @@ const APIConnectionNode: CustomNode = ({ data, sync }) => {
         placeholder="Enter API URL..."
         multiline={false}
       />
+      <TextComponent
+        data={data}
+        sync={sync}
+        dataField="api_key"
+        label="API Key"
+        placeholder="Enter API Key..."
+        multiline={false}
+      />
+      <TextComponent
+        data={data}
+        sync={sync}
+        dataField="model"
+        label="Model"
+        placeholder="Enter Model Name..."
+        multiline={false}
+      />
     </div>
   );
 };

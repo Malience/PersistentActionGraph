@@ -29,9 +29,8 @@ def get_files(dir, filetype):
 
 def setup_engine():
     global engine
-    engine = FlowEngine()
+    engine = FlowEngine(app)
     engine.load_nodes()
-
 
 # Application
 @asynccontextmanager
@@ -87,7 +86,7 @@ async def graph_state() -> dict:
 
 @app.post("/add_node/{nodetype}")
 async def add_node(nodetype: str, pos: Position) -> dict:
-    node = engine.create_node(nodetype)
+    node = await engine.create_node(nodetype)
     engine.move_node(node["id"], pos)
     return node
 
@@ -109,7 +108,7 @@ async def resize_node(nodeid: str, dim: Dimension) -> dict:
 
 @app.post("/load_graph")
 async def add_node(data: dict) -> dict:
-    engine.load_graph(data)
+    await engine.load_graph(data)
     return {}
 
 @app.delete("/remove_edge/{edgeid}")
@@ -187,7 +186,7 @@ async def add_subgraph(data: dict) -> dict:
             new_node_data["pos"]["y"] += position_offset["y"]
         
         # Add the node to the engine
-        engine.add_node(new_node_data)
+        await engine.add_node(new_node_data)
         new_nodes.append(engine.nodes[new_id].serialize())
     
     # Add edges with new IDs and updated node references

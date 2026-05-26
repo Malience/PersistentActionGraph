@@ -94,12 +94,12 @@
         }
       ],
       "pos": {
-        "x": -128.82206904626702,
-        "y": -420.9688055600702
+        "x": -212.30809555249112,
+        "y": -468.8504972327576
       },
       "size": {
-        "width": 218,
-        "height": 115
+        "width": 299,
+        "height": 171
       },
       "label": "API Connection",
       "data": {
@@ -197,7 +197,7 @@
       },
       "size": {
         "width": 252,
-        "height": 125
+        "height": 141
       },
       "label": "Chat Message",
       "data": {
@@ -269,8 +269,8 @@
         "y": -167.40410817231637
       },
       "size": {
-        "width": 233,
-        "height": 216
+        "width": 235,
+        "height": 253
       },
       "label": "Message Database",
       "data": {
@@ -365,8 +365,8 @@
         "y": 213.7114538089585
       },
       "size": {
-        "width": 435,
-        "height": 465
+        "width": 437,
+        "height": 466
       },
       "label": "Chat Display",
       "data": {
@@ -408,7 +408,7 @@
       },
       "size": {
         "width": 252,
-        "height": 125
+        "height": 140
       },
       "label": "Chat Message",
       "data": {
@@ -445,7 +445,12 @@
     {
       "id": "CYZw36BqSzQVA3YSUbfpb3",
       "nodetype": "JSONSchemaNode",
-      "input_slots": [],
+      "input_slots": [
+        {
+          "id": "properties",
+          "datatype": "json_schema[]"
+        }
+      ],
       "output_slots": [
         {
           "id": "schema",

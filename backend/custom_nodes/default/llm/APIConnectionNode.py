@@ -12,7 +12,9 @@ class APIConnectionNode(CustomNode):
         
         # Initialize data with default API URL matching the TypeScript version
         self.data = {
-            "api_url": "http://127.0.0.1:5001/v1/chat/completions"
+            "api_url": "http://127.0.0.1:5001/v1/chat/completions",
+            "api_key": "",
+            "model": "kcpp"
             # "api_url": "http://127.0.0.1:5001/api/v1/generate"
         }
     

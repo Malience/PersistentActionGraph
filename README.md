@@ -10,6 +10,8 @@ A full-stack visual programming environment built with FastAPI (Python backend) 
 - **Custom Signaling**: Advanced messaging system beyond simple data flow
 - **Extensible Node System**: Easy to add custom nodes in both backend and frontend
 - **Graph State Persistence**: Rather than compiling and running like a caluclator, this graph runs based on actions. As actions flow through the graph they trigger nodes. These nodes have persistent data that doesn't reset.
+- **Networking Nodes**: Nodes that can send and receive REST API calls directly on the graph! Check out the Webpage Generator example for a fun demonstration!
+- **OpenAI Compatible Interface**: Compatible with any OpenAI compliant API.
 
 ## Tech Stack
 
